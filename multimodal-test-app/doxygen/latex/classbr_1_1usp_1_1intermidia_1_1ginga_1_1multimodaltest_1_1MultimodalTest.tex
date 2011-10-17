@@ -1,0 +1,147 @@
+\section{Referência da Classe br::usp::intermidia::ginga::multimodaltest::MultimodalTest}
+\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest}\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf $\sim$MultimodalTest} ()
+\item 
+bool {\bf multimodalUserEventReceived} (IMultimodalInputEvent $\ast$ev)
+\item 
+bool {\bf userEventReceived} (IInputEvent $\ast$ev)
+\item 
+void {\bf registerListener} ()
+\item 
+void {\bf showInk} (Ink $\ast$ink)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf MultimodalTest} $\ast$ {\bf getInstance} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf MultimodalTest} ()
+\item 
+void {\bf initializeWindow} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+HLoggerPtr {\bf logger}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_a3957c998654e8180e477b8e09b3b70a3}
+
+\begin{DoxyCompactList}\small\item\em Componente auxiliar para realização de logs. \item\end{DoxyCompactList}\item 
+IWindow $\ast$ {\bfseries win}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_aa0a93441efa6d0284b89438d3f2d7080}
+
+\item 
+ISurface $\ast$ {\bfseries surface}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_a0a3ac8777209512e53762d612a72bf5a}
+
+\item 
+IColor $\ast$ {\bfseries inkColor}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_ae48dc77ae8d5681b9fd89c701ec1351c}
+
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf MultimodalTest} $\ast$ {\bf \_\-instance} = NULL\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_a327e8552939b8355aee1ff2e51859e28}
+
+\begin{DoxyCompactList}\small\item\em Instância única de \doxyref{MultimodalTest}{pag.}{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Construtores \& Destrutores}
+\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}!MultimodalTest@{MultimodalTest}}
+\index{MultimodalTest@{MultimodalTest}!br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsubsection[{MultimodalTest}]{\setlength{\rightskip}{0pt plus 5cm}br::usp::intermidia::ginga::multimodaltest::MultimodalTest::MultimodalTest ()\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_a16075dfb818e6732965e88bbbec77df8}
+Constrói um objeto \doxyref{MultimodalTest}{pag.}{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest}. 
+
+Referências logger.
+
+
+
+Referenciado por getInstance().
+
+\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}!$\sim$MultimodalTest@{$\sim$MultimodalTest}}
+\index{$\sim$MultimodalTest@{$\sim$MultimodalTest}!br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsubsection[{$\sim$MultimodalTest}]{\setlength{\rightskip}{0pt plus 5cm}br::usp::intermidia::ginga::multimodaltest::MultimodalTest::$\sim$MultimodalTest ()}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_aa6d1bf98eddec0e1d8be8fb1f531dc94}
+Destói o objeto \doxyref{MultimodalTest}{pag.}{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest}. 
+
+\subsection{Métodos}
+\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MultimodalTest} $\ast$ br::usp::intermidia::ginga::multimodaltest::MultimodalTest::getInstance ()\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_ac3064d73fc29289cb0045a71c2a43424}
+Acessa a instância única do objeto \doxyref{MultimodalTest}{pag.}{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest}. \begin{DoxyReturn}{Retorna}
+Instância de \doxyref{MultimodalTest}{pag.}{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest}. 
+\end{DoxyReturn}
+
+
+Referências \_\-instance e MultimodalTest().
+
+
+
+Referenciado por initializeWindow().
+
+\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}!initializeWindow@{initializeWindow}}
+\index{initializeWindow@{initializeWindow}!br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsubsection[{initializeWindow}]{\setlength{\rightskip}{0pt plus 5cm}void br::usp::intermidia::ginga::multimodaltest::MultimodalTest::initializeWindow ()\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_a805e5635590bac3c02db0f392a142789}
+Inicializa a janela que é usada para desenhar na tela. 
+
+Referências getInstance().
+
+
+
+Referenciado por showInk().
+
+\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}!multimodalUserEventReceived@{multimodalUserEventReceived}}
+\index{multimodalUserEventReceived@{multimodalUserEventReceived}!br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsubsection[{multimodalUserEventReceived}]{\setlength{\rightskip}{0pt plus 5cm}bool br::usp::intermidia::ginga::multimodaltest::MultimodalTest::multimodalUserEventReceived (IMultimodalInputEvent $\ast$ {\em ev})}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_a38ce2536737d472ddd3c17ed341c5f4f}
+Chamada quando um evento multimodal é disparado. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em Evento}]Multimodal. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso as notificações do evento multimodal devam continuar. 
+
+false caso as notificações do evento multimodal devam parar. 
+\end{DoxyReturn}
+
+
+Referências logger e showInk().
+
+\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}!registerListener@{registerListener}}
+\index{registerListener@{registerListener}!br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsubsection[{registerListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::usp::intermidia::ginga::multimodaltest::MultimodalTest::registerListener ()}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_a199ebb38f9fc8d6d7a5a01fb3c63d1b4}
+Registra um observador. 
+
+Referências logger.
+
+\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}!showInk@{showInk}}
+\index{showInk@{showInk}!br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsubsection[{showInk}]{\setlength{\rightskip}{0pt plus 5cm}void br::usp::intermidia::ginga::multimodaltest::MultimodalTest::showInk (Ink $\ast$ {\em ink})}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_a13659aa8f490c85943b8de2a62eeffbe}
+Usa métodos do DirectFB para mostrar dados de tinta na tela. 
+
+Referências initializeWindow() e logger.
+
+
+
+Referenciado por multimodalUserEventReceived().
+
+\index{br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}!userEventReceived@{userEventReceived}}
+\index{userEventReceived@{userEventReceived}!br::usp::intermidia::ginga::multimodaltest::MultimodalTest@{br::usp::intermidia::ginga::multimodaltest::MultimodalTest}}
+\subsubsection[{userEventReceived}]{\setlength{\rightskip}{0pt plus 5cm}bool br::usp::intermidia::ginga::multimodaltest::MultimodalTest::userEventReceived (IInputEvent $\ast$ {\em ev})}\label{classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest_ae5dba06e4443e65abb1204fc89f3562d}
+Chamada quando um evento é disparado. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em Evento.}]\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso as notificações do evento devam continuar. 
+
+false caso as notificações do evento devam parar. 
+\end{DoxyReturn}
+
+
+Referências logger.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/{\bf MultimodalTest.h}\item 
+src/MultimodalTest.cpp\end{DoxyCompactItemize}

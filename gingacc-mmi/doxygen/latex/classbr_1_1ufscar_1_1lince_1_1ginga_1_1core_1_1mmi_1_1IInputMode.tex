@@ -1,0 +1,70 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::IInputMode}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode}\index{br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}}
+
+
+{\ttfamily \#include $<$IInputMode.h$>$}
+
+Diagrama de Hierarquia para br::ufscar::lince::ginga::core::mmi::IInputMode:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.71254cm]{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf startingInputMode} ()=0
+\item 
+virtual void {\bf exitingInputMode} ()=0
+\item 
+virtual void {\bf initializeInputMode} ()=0
+\item 
+virtual int {\bf getInputModeType} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bf REDIRECTER} = 0\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode_adfaf56966018115a16565ad04c02b926}
+
+\begin{DoxyCompactList}\small\item\em Representa Modos de entrada redirecionadores de eventos. \item\end{DoxyCompactList}\item 
+static const int {\bf MODIFIER} = 1\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode_a8a2c52c5712a9ba699ddb0d8a61ed31c}
+
+\begin{DoxyCompactList}\small\item\em Represente Modos de entrada modificadores de eventos. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface que representa um modo de entrada de eventos. Pode representar um redirecionador ou um modificador de eventos. 
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}!exitingInputMode@{exitingInputMode}}
+\index{exitingInputMode@{exitingInputMode}!br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}}
+\subsubsection[{exitingInputMode}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::ginga::core::mmi::IInputMode::exitingInputMode ()\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode_abf8a189982838fe77f481c9c62449e1b}
+Método chamado quando o modo de entrada é desativado. 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::nextInputMode().
+
+\index{br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}!getInputModeType@{getInputModeType}}
+\index{getInputModeType@{getInputModeType}!br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}}
+\subsubsection[{getInputModeType}]{\setlength{\rightskip}{0pt plus 5cm}virtual int br::ufscar::lince::ginga::core::mmi::IInputMode::getInputModeType ()\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode_a54f7e96cd446cf07e781cd07d55ae99a}
+Retorna um constante inteira que representa o tipo de modo de entrada. \begin{DoxyReturn}{Retorna}
+REDIRECTER se for um modo redirecionador; MODIFIER se for um modo modificador. 
+\end{DoxyReturn}
+
+
+Implementado por {\bf br::ufscar::lince::ginga::core::mmi::InputModeModifier} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeModifier_a75a4129026ec1170e25defb04d00a1a3} e {\bf br::ufscar::lince::ginga::core::mmi::InputModeRedirecter} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeRedirecter_a4ede0c5c135504bf4746d1a43b531114}.
+
+\index{br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}!initializeInputMode@{initializeInputMode}}
+\index{initializeInputMode@{initializeInputMode}!br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}}
+\subsubsection[{initializeInputMode}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::ginga::core::mmi::IInputMode::initializeInputMode ()\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode_aabbbe0164832ed9d5804cf184bb83dce}
+Método chamado quando o modo de entrada é adicionado aos modos existentes. \index{br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}!startingInputMode@{startingInputMode}}
+\index{startingInputMode@{startingInputMode}!br::ufscar::lince::ginga::core::mmi::IInputMode@{br::ufscar::lince::ginga::core::mmi::IInputMode}}
+\subsubsection[{startingInputMode}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::ginga::core::mmi::IInputMode::startingInputMode ()\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode_a69dafa4a349410d4ba1020bbf5c06d7b}
+Método chamado quando o modo de entrada é ativado. 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::nextInputMode().
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+include/{\bf IInputMode.h}\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::File}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File}\index{br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}}
+
+
+{\ttfamily \#include $<$File.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf File} (string {\bf name}, string {\bf mimetype})
+\item 
+{\bf $\sim$File} ()
+\item 
+virtual string {\bf getName} ()
+\item 
+virtual void {\bf setName} (string {\bf name})
+\item 
+virtual string {\bf getMimetype} ()
+\item 
+virtual void {\bf setMimetype} (string {\bf mimetype})
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+string {\bf name}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File_a8e0ab8015e20af1b6c5ff72760ff84df}
+
+\begin{DoxyCompactList}\small\item\em Nome do arquivo. \item\end{DoxyCompactList}\item 
+string {\bf mimetype}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File_a8d73fa728a757d2adbce6d074486fdc4}
+
+\begin{DoxyCompactList}\small\item\em Mimetype do arquivo. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que representa um arquivo, como imagem, vídeo ou áudio, contido em um \doxyref{MultimodalInputEvent}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent}. 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}!File@{File}}
+\index{File@{File}!br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}}
+\subsubsection[{File}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::File::File (string {\em name}, \/  string {\em mimetype})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File_a5a51299682162eb810dc31fdae057294}
+Constrói um objeto \doxyref{File}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File}
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em name}]conteúdo do arquivo \item[{\em mimetype}]do arquivo \end{DoxyParams}
+\index{br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}!$\sim$File@{$\sim$File}}
+\index{$\sim$File@{$\sim$File}!br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}}
+\subsubsection[{$\sim$File}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::File::$\sim$File ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File_ac95ab3ad580207852bdb3bfbd99975a1}
+Destrói o objeto \doxyref{File}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File} 
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}!getMimetype@{getMimetype}}
+\index{getMimetype@{getMimetype}!br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}}
+\subsubsection[{getMimetype}]{\setlength{\rightskip}{0pt plus 5cm}string br::ufscar::lince::ginga::core::mmi::File::getMimetype ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File_a0edf62ca1c841edd7816fa5e97221b9b}
+Acessa o mimetype do arquivo \begin{DoxyReturn}{Retorna}
+mimetype do arquivo 
+\end{DoxyReturn}
+
+
+Referências mimetype.
+
+\index{br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}!getName@{getName}}
+\index{getName@{getName}!br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}}
+\subsubsection[{getName}]{\setlength{\rightskip}{0pt plus 5cm}string br::ufscar::lince::ginga::core::mmi::File::getName ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File_a6affbdd82cd52dc5f62499a677af7d9c}
+Acessa o nome do arquivo \begin{DoxyReturn}{Retorna}
+nome do arquivo 
+\end{DoxyReturn}
+
+
+Referências name.
+
+\index{br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}!setMimetype@{setMimetype}}
+\index{setMimetype@{setMimetype}!br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}}
+\subsubsection[{setMimetype}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::File::setMimetype (string {\em mimetype})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File_a0aebc38dd447a72b5d8e03e6885baaf4}
+Define o mimetype do arquivo 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em mimetype}]do arquivo \end{DoxyParams}
+\index{br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}!setName@{setName}}
+\index{setName@{setName}!br::ufscar::lince::ginga::core::mmi::File@{br::ufscar::lince::ginga::core::mmi::File}}
+\subsubsection[{setName}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::File::setName (string {\em name})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File_a5e710ddd1520dea995c3cc82fcd10ed1}
+Define o nome do arquivo 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em name}]conteúdo do arquivo \end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/{\bf File.h}\item 
+src/{\bf File.cpp}\end{DoxyCompactItemize}

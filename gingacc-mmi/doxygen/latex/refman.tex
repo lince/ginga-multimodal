@@ -1,0 +1,87 @@
+\documentclass[a4paper]{book}
+\usepackage{a4wide}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Ginga-\/CC -\/ Componente de Interação Multimodal }\\
+\vspace*{1cm}
+{\large Gerado por Doxygen 1.6.3}\\
+\vspace*{0.5cm}
+{\small Wed Nov 17 16:30:21 2010}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\chapter{Índice dos Componentes}
+\input{hierarchy}
+\chapter{Índice dos Componentes}
+\input{annotated}
+\chapter{Índice dos Arquivos}
+\input{files}
+\chapter{Classes}
+\input{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1Acceleration}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Context}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Definitions}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1DFBMultimodalInputEvent}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1DuplicateException}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1GlobalFunction}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEventListener}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkSource}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeModifier}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeRedirecter}
+\include{structlockedListenerAction}
+\include{structlockedMultimodalListenerAction}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent}
+\include{structbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1structBoundingBox}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace}
+\include{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat}
+\chapter{Arquivos}
+\input{Acceleration_8h}
+\include{CommunicationManager_8h}
+\include{DFBMultimodalInputEvent_8h}
+\include{File_8h}
+\include{IEnhancedInputManager_8h}
+\include{IInputMode_8h}
+\include{IMultimodalInputEvent_8h}
+\include{IMultimodalInputEventListener_8h}
+\include{InputModeModifier_8h}
+\include{InputModeRedirecter_8h}
+\include{MultimodalInputEvent_8h}
+\include{Acceleration_8cpp}
+\include{CommunicationManager_8cpp}
+\include{DFBMultimodalInputEvent_8cpp}
+\include{EnhancedInputManager_8cpp}
+\include{EventParser_8cpp}
+\include{File_8cpp}
+\include{MultimodalInputEvent_8cpp}
+\printindex
+\end{document}

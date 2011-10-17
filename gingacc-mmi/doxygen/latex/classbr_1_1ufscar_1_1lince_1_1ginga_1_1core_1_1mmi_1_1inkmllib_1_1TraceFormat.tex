@@ -1,0 +1,130 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat}\index{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}}
+
+
+{\ttfamily \#include $<$TraceFormat.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf TraceFormat} ()
+\item 
+{\bf TraceFormat} (char $\ast${\bf id})
+\item 
+void {\bf addChannelOrder} (CHANNEL c)
+\item 
+char $\ast$ {\bf getID} ()
+\item 
+CHANNEL {\bf getChannelAtIndex} (int index)
+\item 
+void {\bf addChannelOrder} (char $\ast$c)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf id}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_abea6b0aaf271558a97e152cfb91444da}
+
+\begin{DoxyCompactList}\small\item\em Id do traceFormat. \item\end{DoxyCompactList}\item 
+bool {\bf channelFPresent}
+\item 
+vector$<$ {\bf Channel} $>$ $\ast$ {\bf vectChannel}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_a2b46b43d288be14cd49f84b680ca49ce}
+
+\begin{DoxyCompactList}\small\item\em Lista de channels. \item\end{DoxyCompactList}\item 
+vector$<$ CHANNEL $>$ $\ast$ {\bf vectChannelOrder}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_a59710257ae03cbd54cf3d97f46b440f8}
+
+\begin{DoxyCompactList}\small\item\em Lista de channels. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que representa o formato de um trace de um InkML. Mais informações em {\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}!TraceFormat@{TraceFormat}}
+\index{TraceFormat@{TraceFormat}!br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}}
+\subsubsection[{TraceFormat}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::TraceFormat ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_a0796113a07aa206d2d1c840fa244058b}
+Desc -\/ Constructor 
+
+Referências channelFPresent, vectChannel e vectChannelOrder.
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}!TraceFormat@{TraceFormat}}
+\index{TraceFormat@{TraceFormat}!br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}}
+\subsubsection[{TraceFormat}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::TraceFormat (char $\ast$ {\em id})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_aa92ce1c7c122ffff651e2d70cf2a448d}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em id}]do traceFormat. \end{DoxyParams}
+
+
+Referências channelFPresent, vectChannel e vectChannelOrder.
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}!addChannelOrder@{addChannelOrder}}
+\index{addChannelOrder@{addChannelOrder}!br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}}
+\subsubsection[{addChannelOrder}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::addChannelOrder (char $\ast$ {\em c})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_ac238cb7dd873135c37a48791928eac5d}
+Adiciona um channel. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em c}]\doxyref{Channel}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel} a ser adicionado. \end{DoxyParams}
+
+
+Referências br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction::toLower() e vectChannelOrder.
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}!addChannelOrder@{addChannelOrder}}
+\index{addChannelOrder@{addChannelOrder}!br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}}
+\subsubsection[{addChannelOrder}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::addChannelOrder (CHANNEL {\em c})\hspace{0.3cm}{\ttfamily  [inline]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_a64f0b3f44db4c5b10042e4f768371c67}
+Adiciona um channel. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em c}]\doxyref{Channel}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel} a ser adicionado. \end{DoxyParams}
+
+
+Referências vectChannelOrder.
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}!getChannelAtIndex@{getChannelAtIndex}}
+\index{getChannelAtIndex@{getChannelAtIndex}!br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}}
+\subsubsection[{getChannelAtIndex}]{\setlength{\rightskip}{0pt plus 5cm}CHANNEL br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::getChannelAtIndex (int {\em index})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_a1c7fb6f09dd4cad76200401852df8494}
+Acessa um determinado channel 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em index}]Índice do channel a ser acessado \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O channel
+\end{DoxyReturn}
+Returns CHANNEL at a specified index. This can be used to determine the order of channel in trace format. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em index}]The index. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+The CHANNEL. 
+\end{DoxyReturn}
+
+
+Referências vectChannelOrder.
+
+
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::parseTraceData().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}!getID@{getID}}
+\index{getID@{getID}!br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}}
+\subsubsection[{getID}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::getID ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_acc708c98706c95b9a45adc7f3d9cec70}
+Acessa o ID do traceFormat. \begin{DoxyReturn}{Retorna}
+id do traceFormat. 
+\end{DoxyReturn}
+
+
+Referências id.
+
+
+
+\subsection{Atributos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}!channelFPresent@{channelFPresent}}
+\index{channelFPresent@{channelFPresent}!br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat@{br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat}}
+\subsubsection[{channelFPresent}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::channelFPresent}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat_ad6a523e99653ebcbf6ae0ae38fc126ed}
+Desc -\/ By default only X and Y channels are present This flag is to know whether pressure is present or not 
+
+Referenciado por TraceFormat().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/TraceFormat.h\item 
+src/TraceFormat.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Ginga-CC - Componente de Interação Multimodal: Código-Fonte de include/IMultimodalInputEvent.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+<h1>include/IMultimodalInputEvent.h</h1><a href="IMultimodalInputEvent_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/******************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment">Este arquivo eh parte da implementacao do ambiente declarativo do middleware</span>
+<a name="l00003"></a>00003 <span class="comment">Ginga (Ginga-NCL).</span>
+<a name="l00004"></a>00004 <span class="comment"></span>
+<a name="l00005"></a>00005 <span class="comment">Copyright (C) 2009 UFSCar/Lince, Todos os Direitos Reservados.</span>
+<a name="l00006"></a>00006 <span class="comment"></span>
+<a name="l00007"></a>00007 <span class="comment">Este programa eh software livre; voce pode redistribui-lo e/ou modificah-lo sob</span>
+<a name="l00008"></a>00008 <span class="comment">os termos da Licenca Publica Geral GNU versao 2 conforme publicada pela Free</span>
+<a name="l00009"></a>00009 <span class="comment">Software Foundation.</span>
+<a name="l00010"></a>00010 <span class="comment"></span>
+<a name="l00011"></a>00011 <span class="comment">Este programa eh distribuido na expectativa de que seja util, porem, SEM</span>
+<a name="l00012"></a>00012 <span class="comment">NENHUMA GARANTIA; nem mesmo a garantia implicita de COMERCIABILIDADE OU</span>
+<a name="l00013"></a>00013 <span class="comment">ADEQUACAO A UMA FINALIDADE ESPECIFICA. Consulte a Licenca Publica Geral do</span>
+<a name="l00014"></a>00014 <span class="comment">GNU versao 2 para mais detalhes.</span>
+<a name="l00015"></a>00015 <span class="comment"></span>
+<a name="l00016"></a>00016 <span class="comment">Voce deve ter recebido uma copia da Licenca Publica Geral do GNU versao 2 junto</span>
+<a name="l00017"></a>00017 <span class="comment">com este programa; se nao, escreva para a Free Software Foundation, Inc., no</span>
+<a name="l00018"></a>00018 <span class="comment">endereco 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.</span>
+<a name="l00019"></a>00019 <span class="comment"></span>
+<a name="l00020"></a>00020 <span class="comment">Para maiores informacoes:</span>
+<a name="l00021"></a>00021 <span class="comment">lince@dc.ufscar.br</span>
+<a name="l00022"></a>00022 <span class="comment">mgp@icmc.usp.br</span>
+<a name="l00023"></a>00023 <span class="comment">http://www.ncl.org.br</span>
+<a name="l00024"></a>00024 <span class="comment">http://www.ginga.org.br</span>
+<a name="l00025"></a>00025 <span class="comment">http://lince.dc.ufscar.br</span>
+<a name="l00026"></a>00026 <span class="comment">http://www.icmc.usp.br/php/laboratorio.php?origem=icmc&amp;id_lab=3&amp;nat=icmc</span>
+<a name="l00027"></a>00027 <span class="comment">******************************************************************************</span>
+<a name="l00028"></a>00028 <span class="comment">This file is part of the declarative environment of middleware Ginga (Ginga-NCL)</span>
+<a name="l00029"></a>00029 <span class="comment"></span>
+<a name="l00030"></a>00030 <span class="comment">Copyright (C) 2009 UFSCar/Lince, Todos os Direitos Reservados.</span>
+<a name="l00031"></a>00031 <span class="comment"></span>
+<a name="l00032"></a>00032 <span class="comment">This program is free software; you can redistribute it and/or modify it under</span>
+<a name="l00033"></a>00033 <span class="comment">the terms of the GNU General Public License version 2 as published by</span>
+<a name="l00034"></a>00034 <span class="comment">the Free Software Foundation.</span>
+<a name="l00035"></a>00035 <span class="comment"></span>
+<a name="l00036"></a>00036 <span class="comment">This program is distributed in the hope that it will be useful, but WITHOUT ANY</span>
+<a name="l00037"></a>00037 <span class="comment">WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A</span>
+<a name="l00038"></a>00038 <span class="comment">PARTICULAR PURPOSE.  See the GNU General Public License version 2 for more</span>
+<a name="l00039"></a>00039 <span class="comment">details.</span>
+<a name="l00040"></a>00040 <span class="comment"></span>
+<a name="l00041"></a>00041 <span class="comment">You should have received a copy of the GNU General Public License version 2</span>
+<a name="l00042"></a>00042 <span class="comment">along with this program; if not, write to the Free Software</span>
+<a name="l00043"></a>00043 <span class="comment">Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</span>
+<a name="l00044"></a>00044 <span class="comment"></span>
+<a name="l00045"></a>00045 <span class="comment">For further information contact:</span>
+<a name="l00046"></a>00046 <span class="comment">lince@dc.ufscar.br</span>
+<a name="l00047"></a>00047 <span class="comment">mgp@icmc.usp.br</span>
+<a name="l00048"></a>00048 <span class="comment">http://www.ncl.org.br</span>
+<a name="l00049"></a>00049 <span class="comment">http://www.ginga.org.br</span>
+<a name="l00050"></a>00050 <span class="comment">http://lince.dc.ufscar.br</span>
+<a name="l00051"></a>00051 <span class="comment">*******************************************************************************/</span>
+<a name="l00052"></a>00052 
+<a name="l00059"></a>00059 <span class="preprocessor">#ifndef IMULTIMODALINPUTEVENT_H</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span><span class="preprocessor">#define IMULTIMODALINPUTEVENT_H</span>
+<a name="l00061"></a>00061 <span class="preprocessor"></span>
+<a name="l00062"></a>00062 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00063"></a>00063 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00064"></a>00064 <span class="keyword">using namespace </span>std;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="preprocessor">#include &quot;<a class="code" href="File_8h.html">File.h</a>&quot;</span>
+<a name="l00067"></a>00067 <span class="preprocessor">#include &quot;<a class="code" href="Acceleration_8h.html">Acceleration.h</a>&quot;</span>
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="preprocessor">#include &quot;Ink.h&quot;</span>
+<a name="l00070"></a>00070 <span class="keyword">using namespace </span>::br::ufscar::lince::ginga::core::mmi::inkmllib;
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="keyword">namespace </span>br{
+<a name="l00073"></a>00073 <span class="keyword">namespace </span>ufscar{
+<a name="l00074"></a>00074 <span class="keyword">namespace </span>lince{
+<a name="l00075"></a>00075 <span class="keyword">namespace </span>ginga{
+<a name="l00076"></a>00076 <span class="keyword">namespace </span>core{
+<a name="l00077"></a>00077 <span class="keyword">namespace </span>mmi{
+<a name="l00078"></a>00078 
+<a name="l00082"></a><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html">00082</a> <span class="keyword">class </span><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html">IMultimodalInputEvent</a> {
+<a name="l00083"></a>00083         <span class="keyword">public</span>:
+<a name="l00088"></a><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#ab16904f9f3cc150797d9fb6988cb266d">00088</a>                 <span class="keyword">virtual</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#ab16904f9f3cc150797d9fb6988cb266d">~IMultimodalInputEvent</a>(){};
+<a name="l00089"></a>00089 
+<a name="l00094"></a>00094                 <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a61a42387f2e29c30639905079695d8f8">getId</a>() = 0;
+<a name="l00095"></a>00095 
+<a name="l00100"></a>00100                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#aaaa1d0a0d5d196e2b3e43573404f2cca">setId</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>) = 0;
+<a name="l00101"></a>00101 
+<a name="l00107"></a>00107                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#ad10863e1dbfe978e89729ad629edb815">addValue</a>(<span class="keywordtype">string</span> name, <span class="keywordtype">void</span>* value) = 0;
+<a name="l00108"></a>00108 
+<a name="l00115"></a>00115                 <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#adfcffaf158db42a0d0fb6e522faad91f">removeValue</a>(<span class="keywordtype">string</span> name) = 0;
+<a name="l00116"></a>00116 
+<a name="l00121"></a>00121                 <span class="keyword">virtual</span> map&lt;string, void*&gt;* <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a2063d0a8661ed4e178bab240c91cc014">getMultimodalValuesMap</a>() = 0;
+<a name="l00122"></a>00122 
+<a name="l00127"></a>00127                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#ac9d69cb5bae636bf164d620dfb8c5d75">setMultimodalValuesMap</a>(map&lt;string, void*&gt;* map) = 0;
+<a name="l00128"></a>00128 
+<a name="l00133"></a>00133                 <span class="keyword">virtual</span> vector&lt;string&gt;* <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a41a14202b17c64e7d0216d47bfeebfd9">getStrings</a>() = 0;
+<a name="l00134"></a>00134 
+<a name="l00139"></a>00139                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a17f4a388d7854789b10d68615b098d56">addString</a>(<span class="keywordtype">string</span> str) = 0;
+<a name="l00140"></a>00140 
+<a name="l00145"></a>00145                 <span class="keyword">virtual</span> Ink* <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a23a24cc399ceb022a43a60c46ae6a6d9">getInk</a>() = 0;
+<a name="l00146"></a>00146 
+<a name="l00151"></a>00151                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a2d7da14262a0127f188f69a72ec4a5de">setInk</a>(Ink* ink) = 0;
+<a name="l00152"></a>00152 
+<a name="l00157"></a>00157                 <span class="keyword">virtual</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1Acceleration.html">Acceleration</a>* <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a9ed35bcbcbb3cbb20b050d5665d9ff35">getAcceleration</a>() = 0;
+<a name="l00158"></a>00158 
+<a name="l00163"></a>00163                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a9ba0b45f1919bbfbe08bc0267a7452eb">setAcceleration</a>(<a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1Acceleration.html">Acceleration</a>* accel) = 0;
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165                 <span class="comment">//TODO get e set para voice</span>
+<a name="l00166"></a>00166 
+<a name="l00171"></a>00171                 <span class="keyword">virtual</span> vector&lt;File*&gt;* <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a3616b43630e332773c482d6406c00a2f">getBinaries</a>() = 0;
+<a name="l00172"></a>00172 
+<a name="l00177"></a>00177                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent.html#a2202acece2c5b201899ef73a374cb53e">addFile</a>(<a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1File.html">File</a>* f) = 0;
+<a name="l00178"></a>00178 };
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180 }
+<a name="l00181"></a>00181 }
+<a name="l00182"></a>00182 }
+<a name="l00183"></a>00183 }
+<a name="l00184"></a>00184 }
+<a name="l00185"></a>00185 }
+<a name="l00186"></a>00186 
+<a name="l00187"></a>00187 <span class="preprocessor">#endif </span><span class="comment">/*IMULTIMODALINPUTEVENT_H*/</span>
+</pre></div></div>
+<hr class="footer"/><address style="text-align: right;"><small>Gerado em Wed Nov 17 16:30:21 2010 para Ginga-CC - Componente de Interação Multimodal por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

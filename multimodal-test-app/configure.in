@@ -1,0 +1,86 @@
+AC_INIT(configure.in)
+AM_INIT_AUTOMAKE(MultimodalTestApp, 0.11.2)
+AM_CONFIG_HEADER(config.h)
+
+##############################
+# Checks for programs.
+##############################
+
+
+AC_LANG_CPLUSPLUS
+AC_PROG_CXX([g++])
+AC_PROG_LIBTOOL
+
+CXXFLAGS="-fPIC $CXXFLAGS"
+CFLAGS="-fPIC $CFLAGS"
+
+# Bring additional directories where things might be found into our
+# search path. I don't know why autoconf doesn't do this by default
+for spfx in /usr/lib/ /usr/local/lib/ /usr/local/lib/ginga/; do
+if test -d ${spfx}; then
+LDFLAGS="-L${spfx} $LDFLAGS"
+fi
+done
+
+for spfx in /usr/include/ /usr/local/include/ /usr/local/include/ginga/; do
+if test -d ${spfx}; then
+CPPFLAGS="-I${spfx} $CPPFLAGS"
+fi
+done
+
+##############################
+# Checks for header files.   #
+##############################
+
+##################
+# TeleMidia Util #
+##################
+AC_CHECK_HEADER([util/functions.h], [], AC_MSG_ERROR([
+
+Couldn't find TeleMidia Util headers.
+Please install TeleMidia Util.
+
+]))
+
+###################################
+# Ginga-CC Multimodal Interaction #
+###################################
+AC_CHECK_HEADER([mmi/IEnhancedInputManager.h], [], AC_MSG_ERROR([
+
+Couldn't find Ginga-CC Multimodal Interaction headers.
+Please install Ginga-CC Multimodal Interaction project.
+
+]))
+
+
+########
+# LIBS #
+########
+
+##################
+# TeleMidia Util #
+##################
+AC_HAVE_LIBRARY(telemidiautil, , AC_ERROR([
+
+Couldn't find TeleMidia Util library.
+Please install TeleMidia Util.
+
+]))
+
+###################################
+# Ginga-CC Multimodal Interaction #
+###################################
+#AC_HAVE_LIBRARY(gingaccmmi, , AC_ERROR([
+
+#Couldn't find Ginga-CC Multimodal Interaction library.
+#Please install Ginga-CC Multimodal Interaction.
+
+#]))
+
+##############################
+# Makefiles
+##############################
+
+AC_OUTPUT([
+Makefile include/Makefile src/Makefile
+])

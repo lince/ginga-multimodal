@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Multimodal Test App: Código-Fonte de include/MultimodalTest.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+    </ul>
+  </div>
+<h1>include/MultimodalTest.h</h1><a href="MultimodalTest_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/******************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment">Este arquivo eh parte da implementacao do ambiente declarativo do middleware</span>
+<a name="l00003"></a>00003 <span class="comment">Ginga (Ginga-NCL).</span>
+<a name="l00004"></a>00004 <span class="comment"></span>
+<a name="l00005"></a>00005 <span class="comment">Copyright (C) 2009 UFSCar/Lince, Todos os Direitos Reservados.</span>
+<a name="l00006"></a>00006 <span class="comment"></span>
+<a name="l00007"></a>00007 <span class="comment">Este programa eh software livre; voce pode redistribui-lo e/ou modificah-lo sob</span>
+<a name="l00008"></a>00008 <span class="comment">os termos da Licenca Publica Geral GNU versao 2 conforme publicada pela Free</span>
+<a name="l00009"></a>00009 <span class="comment">Software Foundation.</span>
+<a name="l00010"></a>00010 <span class="comment"></span>
+<a name="l00011"></a>00011 <span class="comment">Este programa eh distribuido na expectativa de que seja util, porem, SEM</span>
+<a name="l00012"></a>00012 <span class="comment">NENHUMA GARANTIA; nem mesmo a garantia implicita de COMERCIABILIDADE OU</span>
+<a name="l00013"></a>00013 <span class="comment">ADEQUACAO A UMA FINALIDADE ESPECIFICA. Consulte a Licenca Publica Geral do</span>
+<a name="l00014"></a>00014 <span class="comment">GNU versao 2 para mais detalhes.</span>
+<a name="l00015"></a>00015 <span class="comment"></span>
+<a name="l00016"></a>00016 <span class="comment">Voce deve ter recebido uma copia da Licenca Publica Geral do GNU versao 2 junto</span>
+<a name="l00017"></a>00017 <span class="comment">com este programa; se nao, escreva para a Free Software Foundation, Inc., no</span>
+<a name="l00018"></a>00018 <span class="comment">endereco 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.</span>
+<a name="l00019"></a>00019 <span class="comment"></span>
+<a name="l00020"></a>00020 <span class="comment">Para maiores informacoes:</span>
+<a name="l00021"></a>00021 <span class="comment">lince@dc.ufscar.br</span>
+<a name="l00022"></a>00022 <span class="comment">http://www.ncl.org.br</span>
+<a name="l00023"></a>00023 <span class="comment">http://www.ginga.org.br</span>
+<a name="l00024"></a>00024 <span class="comment">http://lince.dc.ufscar.br</span>
+<a name="l00025"></a>00025 <span class="comment">http://www.icmc.usp.br/php/laboratorio.php?origem=icmc&amp;id_lab=3&amp;nat=icmc</span>
+<a name="l00026"></a>00026 <span class="comment">******************************************************************************</span>
+<a name="l00027"></a>00027 <span class="comment">This file is part of the declarative environment of middleware Ginga (Ginga-NCL)</span>
+<a name="l00028"></a>00028 <span class="comment"></span>
+<a name="l00029"></a>00029 <span class="comment">Copyright (C) 2009 UFSCar/Lince, Todos os Direitos Reservados.</span>
+<a name="l00030"></a>00030 <span class="comment"></span>
+<a name="l00031"></a>00031 <span class="comment">This program is free software; you can redistribute it and/or modify it under</span>
+<a name="l00032"></a>00032 <span class="comment">the terms of the GNU General Public License version 2 as published by</span>
+<a name="l00033"></a>00033 <span class="comment">the Free Software Foundation.</span>
+<a name="l00034"></a>00034 <span class="comment"></span>
+<a name="l00035"></a>00035 <span class="comment">This program is distributed in the hope that it will be useful, but WITHOUT ANY</span>
+<a name="l00036"></a>00036 <span class="comment">WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A</span>
+<a name="l00037"></a>00037 <span class="comment">PARTICULAR PURPOSE.  See the GNU General Public License version 2 for more</span>
+<a name="l00038"></a>00038 <span class="comment">details.</span>
+<a name="l00039"></a>00039 <span class="comment"></span>
+<a name="l00040"></a>00040 <span class="comment">You should have received a copy of the GNU General Public License version 2</span>
+<a name="l00041"></a>00041 <span class="comment">along with this program; if not, write to the Free Software</span>
+<a name="l00042"></a>00042 <span class="comment">Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</span>
+<a name="l00043"></a>00043 <span class="comment"></span>
+<a name="l00044"></a>00044 <span class="comment">For further information contact:</span>
+<a name="l00045"></a>00045 <span class="comment">lince@dc.ufscar.br</span>
+<a name="l00046"></a>00046 <span class="comment">mgp@icmc.usp.br</span>
+<a name="l00047"></a>00047 <span class="comment">http://www.ncl.org.br</span>
+<a name="l00048"></a>00048 <span class="comment">http://www.ginga.org.br</span>
+<a name="l00049"></a>00049 <span class="comment">http://lince.dc.ufscar.br</span>
+<a name="l00050"></a>00050 <span class="comment">*******************************************************************************/</span>
+<a name="l00051"></a>00051 
+<a name="l00059"></a>00059 <span class="preprocessor">#ifndef MULTIMODALTEST_H</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span><span class="preprocessor">#define MULTIMODALTEST_H</span>
+<a name="l00061"></a>00061 <span class="preprocessor"></span>
+<a name="l00062"></a>00062 <span class="preprocessor">#include &quot;mmi/IMultimodalInputEventListener.h&quot;</span>
+<a name="l00063"></a>00063 <span class="preprocessor">#include &quot;mmi/IMultimodalInputEvent.h&quot;</span>
+<a name="l00064"></a>00064 <span class="keyword">using namespace </span>::br::ufscar::lince::ginga::core::mmi;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="preprocessor">#include &quot;system/io/interface/input/IInputEventListener.h&quot;</span>
+<a name="l00067"></a>00067 <span class="preprocessor">#include &quot;system/io/interface/output/ISurface.h&quot;</span>
+<a name="l00068"></a>00068 <span class="preprocessor">#include &quot;system/io/interface/output/IWindow.h&quot;</span>
+<a name="l00069"></a>00069 <span class="keyword">using namespace </span>::br::pucrio::telemidia::ginga::core::system::io;
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#include &lt;ginga/linceutil/LoggerUtil.h&gt;</span>
+<a name="l00072"></a>00072 <span class="keyword">using namespace </span>br::ufscar::lince::util;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 <span class="keyword">using namespace </span>std;
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 <span class="keyword">namespace </span>br {
+<a name="l00077"></a>00077 <span class="keyword">namespace </span>usp {
+<a name="l00078"></a>00078 <span class="keyword">namespace </span>intermidia {
+<a name="l00079"></a>00079 <span class="keyword">namespace </span>ginga {
+<a name="l00080"></a>00080 <span class="keyword">namespace </span>multimodaltest {
+<a name="l00081"></a>00081 
+<a name="l00082"></a><a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html">00082</a> <span class="keyword">class </span><a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html">MultimodalTest</a> : <span class="keyword">public</span> IMultimodalInputEventListener,
+<a name="l00083"></a>00083                 <span class="keyword">public</span> IInputEventListener {
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085         <span class="keyword">protected</span>:
+<a name="l00087"></a><a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a327e8552939b8355aee1ff2e51859e28">00087</a>                 <span class="keyword">static</span> <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html">MultimodalTest</a>* <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a327e8552939b8355aee1ff2e51859e28" title="Instância única de MultimodalTest.">_instance</a>;
+<a name="l00088"></a>00088 
+<a name="l00090"></a><a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a3957c998654e8180e477b8e09b3b70a3">00090</a>                 HLoggerPtr <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a3957c998654e8180e477b8e09b3b70a3" title="Componente auxiliar para realização de logs.">logger</a>;
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092                 IWindow* win;
+<a name="l00093"></a>00093                 ISurface* surface;
+<a name="l00094"></a>00094                 IColor* inkColor;
+<a name="l00095"></a>00095 
+<a name="l00100"></a>00100                 <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a16075dfb818e6732965e88bbbec77df8">MultimodalTest</a>();
+<a name="l00101"></a>00101 
+<a name="l00105"></a>00105                 <span class="keywordtype">void</span> <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a805e5635590bac3c02db0f392a142789">initializeWindow</a>();
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107         <span class="keyword">public</span>:
+<a name="l00112"></a>00112                 <span class="keyword">static</span> <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html">MultimodalTest</a>* <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#ac3064d73fc29289cb0045a71c2a43424">getInstance</a>();
+<a name="l00113"></a>00113                         
+<a name="l00117"></a>00117                 <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#aa6d1bf98eddec0e1d8be8fb1f531dc94">~MultimodalTest</a>();
+<a name="l00118"></a>00118                 
+<a name="l00126"></a>00126                 <span class="keywordtype">bool</span> <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a38ce2536737d472ddd3c17ed341c5f4f">multimodalUserEventReceived</a>(IMultimodalInputEvent* ev);
+<a name="l00127"></a>00127 
+<a name="l00134"></a>00134                 <span class="keywordtype">bool</span> <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#ae5dba06e4443e65abb1204fc89f3562d">userEventReceived</a>(IInputEvent* ev);
+<a name="l00135"></a>00135                 
+<a name="l00140"></a>00140                 <span class="keywordtype">void</span> <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a199ebb38f9fc8d6d7a5a01fb3c63d1b4">registerListener</a>();
+<a name="l00141"></a>00141 
+<a name="l00146"></a>00146                 <span class="keywordtype">void</span> <a class="code" href="classbr_1_1usp_1_1intermidia_1_1ginga_1_1multimodaltest_1_1MultimodalTest.html#a13659aa8f490c85943b8de2a62eeffbe">showInk</a>(Ink *ink);
+<a name="l00147"></a>00147 };
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149 }
+<a name="l00150"></a>00150 }
+<a name="l00151"></a>00151 }
+<a name="l00152"></a>00152 }
+<a name="l00153"></a>00153 }
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155 <span class="preprocessor">#endif //MULTIMODALTEST_H</span>
+</pre></div></div>
+<hr class="footer"/><address style="text-align: right;"><small>Gerado em Wed Nov 17 16:42:10 2010 para Multimodal Test App por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

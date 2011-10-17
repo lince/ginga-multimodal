@@ -1,0 +1,92 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser}\index{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}}
+
+
+{\ttfamily \#include $<$InkMLParser.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf InkMLParser} ()
+\item 
+{\bf Ink} $\ast$ {\bf parse} (DOMElement $\ast$inkMLData, InkMLError $\ast$retCode)
+\item 
+void {\bf insertTrace} (DOMElement $\ast$child, {\bf Ink} $\ast$objInk)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf parseDefinitions} (DOMElement $\ast$e, {\bf Ink} $\ast$objInk)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+HLoggerPtr {\bf logger}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser_a9804b5bea7dd3305c8b1f157e86dffdd}
+
+\begin{DoxyCompactList}\small\item\em Responsável pelo controle das mensagens de log. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe responsável por realizar o parser de um InkML, utilizando a biblioteca xerces. Mais informações em {\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}!InkMLParser@{InkMLParser}}
+\index{InkMLParser@{InkMLParser}!br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}}
+\subsubsection[{InkMLParser}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::InkMLParser ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser_a2dffb7a2c98bd50a035184d2d660300a}
+Construtor da classe InKMLParser. 
+
+Referências logger.
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}!insertTrace@{insertTrace}}
+\index{insertTrace@{insertTrace}!br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}}
+\subsubsection[{insertTrace}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::insertTrace (DOMElement $\ast$ {\em child}, \/  {\bf Ink} $\ast$ {\em objInk})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser_ac307a577bc21734a4e4eb76c59267524}
+Faz o parser de uma tag \char`\"{}trace\char`\"{} e acrescenta os dados no objeto da Classe \doxyref{Ink}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink} recebido.
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em child}]DOMElement a ser parseado \item[{\em objInk}]Instância de \doxyref{Ink}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink} que receberá os dados parseados \end{DoxyParams}
+
+
+Referências br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::addTrace(), br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::boundingBox, br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::currentContext, logger, br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::parseTraceData(), br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::setTraceFormatRef() e br::ufscar::lince::ginga::core::mmi::inkmllib::Context::traceFormatRef.
+
+
+
+Referenciado por parse().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}!parse@{parse}}
+\index{parse@{parse}!br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ink} $\ast$ br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parse (DOMElement $\ast$ {\em inkMLData}, \/  InkMLError $\ast$ {\em retCode})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser_a2bd9e0ac70c5b4445c906564173f7f17}
+Faz o parser de uma tag \char`\"{}ink\char`\"{} e retorna um objeto da Classe \doxyref{Ink}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink}.
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em inkMLData}]DOMElement a ser parseado \item[{\em retCode}]Código de erro, caso ocorra, ou NoError em caso de sucesso \end{DoxyParams}
+
+
+Referências br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction::checkAndRemoveHash(), br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::currentContext, br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::getDefinitions(), insertTrace(), logger, parseDefinitions() e br::ufscar::lince::ginga::core::mmi::inkmllib::Context::traceFormatRef.
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}!parseDefinitions@{parseDefinitions}}
+\index{parseDefinitions@{parseDefinitions}!br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser@{br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser}}
+\subsubsection[{parseDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parseDefinitions (DOMElement $\ast$ {\em e}, \/  {\bf Ink} $\ast$ {\em objInk})\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser_abcca6b78214275053d86084d66077018}
+Faz o parser de uma tag \char`\"{}definitions\char`\"{} e acrescenta os dados no objeto da Classe \doxyref{Ink}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink} recebido.
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[{\em e}]DOMElement a ser parseado \item[{\em objInk}]Instância de \doxyref{Ink}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink} que receberá os dados parseados \end{DoxyParams}
+
+
+Referências br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::addDefinitions(), br::ufscar::lince::ginga::core::mmi::inkmllib::Definitions::addInkSource(), br::ufscar::lince::ginga::core::mmi::inkmllib::Definitions::addTraceFormat(), br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::id e logger.
+
+
+
+Referenciado por parse().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/InkMLParser.h\item 
+src/InkMLParser.cpp\end{DoxyCompactItemize}

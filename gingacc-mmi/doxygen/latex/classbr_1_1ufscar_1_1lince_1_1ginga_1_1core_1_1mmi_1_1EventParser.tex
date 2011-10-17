@@ -1,0 +1,115 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::EventParser}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser}\index{br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}}
+
+
+{\ttfamily \#include $<$EventParser.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf EventParser} ()
+\item 
+{\bf $\sim$EventParser} ()
+\item 
+virtual {\bf IMultimodalInputEvent} $\ast$ {\bf parse} (string xml)
+\item 
+virtual void {\bf parseRoot} (DOMElement $\ast$e)
+\item 
+virtual void {\bf parseHead} (DOMElement $\ast$e)
+\item 
+virtual void {\bf parseBody} (DOMElement $\ast$e)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf IMultimodalInputEvent} $\ast$ {\bf multimodalEvent}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser_a16c3b84cb829121fa0469cb70f7113e9}
+
+\begin{DoxyCompactList}\small\item\em Evento. \item\end{DoxyCompactList}\item 
+HLoggerPtr {\bf logger}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser_a00023a052fd6164d261bd5c154e16113}
+
+\begin{DoxyCompactList}\small\item\em Responsável pelo controle das mensagens de log. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que faz o parser de um XML e gera um evento multimodal. Deve ser singleton??? Tomar cuidado com as chamadas de Initialize e Terminate 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}!EventParser@{EventParser}}
+\index{EventParser@{EventParser}!br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}}
+\subsubsection[{EventParser}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::EventParser::EventParser ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser_a555ccc9b2cc896924c6b560cb60f153d}
+Construtor 
+
+Referências logger.
+
+\index{br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}!$\sim$EventParser@{$\sim$EventParser}}
+\index{$\sim$EventParser@{$\sim$EventParser}!br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}}
+\subsubsection[{$\sim$EventParser}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::EventParser::$\sim$EventParser ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser_ab851c112c7b5c5ebcd3226f74c880f0b}
+Destrutor 
+
+Referências logger.
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}!parse@{parse}}
+\index{parse@{parse}!br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IMultimodalInputEvent} $\ast$ br::ufscar::lince::ginga::core::mmi::EventParser::parse (string {\em xml})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser_a7eb3dadffbdd500f63c73cdb62c5435a}
+Faz o parser de um xml. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em xml}]Conteúdo do xml.\end{DoxyParams}
+enum NodeType \{ ELEMENT\_\-NODE = 1, ATTRIBUTE\_\-NODE = 2, TEXT\_\-NODE = 3, CDATA\_\-SECTION\_\-NODE = 4, ENTITY\_\-REFERENCE\_\-NODE = 5, ENTITY\_\-NODE = 6, PROCESSING\_\-INSTRUCTION\_\-NODE = 7, COMMENT\_\-NODE = 8, DOCUMENT\_\-NODE = 9, DOCUMENT\_\-TYPE\_\-NODE = 10, DOCUMENT\_\-FRAGMENT\_\-NODE = 11, NOTATION\_\-NODE = 12 \}; 
+
+Referências logger, multimodalEvent e parseRoot().
+
+
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::postMultimodalEvent().
+
+\index{br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}!parseBody@{parseBody}}
+\index{parseBody@{parseBody}!br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}}
+\subsubsection[{parseBody}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EventParser::parseBody (DOMElement $\ast$ {\em e})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser_afd2f2aa77bb6eb0ef26bf3db3d7c1d0c}
+Faz o parser do corpo do xml. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em e}]Corpo do xml. \end{DoxyParams}
+
+
+Referências br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent::addFile(), br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent::addString(), br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent::addValue(), logger, multimodalEvent, br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent::setAcceleration() e br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent::setInk().
+
+
+
+Referenciado por parseRoot().
+
+\index{br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}!parseHead@{parseHead}}
+\index{parseHead@{parseHead}!br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}}
+\subsubsection[{parseHead}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EventParser::parseHead (DOMElement $\ast$ {\em e})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser_a1aa98a55ccd74a3fe2458c253cd6dafe}
+Faz o parser do cabeçalho do xml. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em e}]Cabeçalho do xml. \end{DoxyParams}
+
+
+Referências br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent::addValue(), logger e multimodalEvent.
+
+
+
+Referenciado por parseRoot().
+
+\index{br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}!parseRoot@{parseRoot}}
+\index{parseRoot@{parseRoot}!br::ufscar::lince::ginga::core::mmi::EventParser@{br::ufscar::lince::ginga::core::mmi::EventParser}}
+\subsubsection[{parseRoot}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EventParser::parseRoot (DOMElement $\ast$ {\em e})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EventParser_a351b2c596f5e216b149176a4beac04f1}
+Faz o parser do elemento raiz do xml. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em e}]Elemento raiz do xml. \end{DoxyParams}
+
+
+Referências logger, multimodalEvent, parseBody() e parseHead().
+
+
+
+Referenciado por parse().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/EventParser.h\item 
+src/{\bf EventParser.cpp}\end{DoxyCompactItemize}

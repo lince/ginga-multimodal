@@ -1,0 +1,41 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEventListener}\index{br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener@{br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener}}
+
+
+{\ttfamily \#include $<$IMultimodalInputEventListener.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf $\sim$IMultimodalInputEventListener} ()
+\item 
+virtual bool {\bf multimodalUserEventReceived} ({\bf IMultimodalInputEvent} $\ast$ev)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface que representa um observador de eventos multimodais. 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener@{br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener}!$\sim$IMultimodalInputEventListener@{$\sim$IMultimodalInputEventListener}}
+\index{$\sim$IMultimodalInputEventListener@{$\sim$IMultimodalInputEventListener}!br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener@{br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener}}
+\subsubsection[{$\sim$IMultimodalInputEventListener}]{\setlength{\rightskip}{0pt plus 5cm}virtual br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener::$\sim$IMultimodalInputEventListener ()\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEventListener_a3a4390e4cfdb64cd46900284ad839a82}
+Destrói o \doxyref{IMultimodalInputEventListener}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEventListener}. 
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener@{br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener}!multimodalUserEventReceived@{multimodalUserEventReceived}}
+\index{multimodalUserEventReceived@{multimodalUserEventReceived}!br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener@{br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener}}
+\subsubsection[{multimodalUserEventReceived}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool br::ufscar::lince::ginga::core::mmi::IMultimodalInputEventListener::multimodalUserEventReceived ({\bf IMultimodalInputEvent} $\ast$ {\em ev})\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEventListener_a22ec3ee98bf25673a6be9cdd5de360db}
+Método chamado quando um evento multimodal é disparado. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em ev}]Evento Multimodal. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso as notificações do evento multimodal devam continuar. 
+
+false caso as notificações do evento multimodal devam parar. 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+include/{\bf IMultimodalInputEventListener.h}\end{DoxyCompactItemize}

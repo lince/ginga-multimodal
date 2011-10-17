@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<multimodal xmlns="http://agua.intermidia.icmc.usp.br/intermidia"
+		xmlns:inkml="http://www.w3.org/2003/InkML"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="multimodal.xsd"
+		id="idDoEventoDeTeste">
+	<head>
+		<device id="DEADBEEF-DEAF-BABA-FEED-BABE00000006"
+				model="iPad"/>
+		<user id="59616261-6461-6261-4E50-472050325045"/>
+		<timestamp begin="2010-08-30T09:30:10.5" end="2010-08-30T09:30:17.8"/>
+	</head>
+	<body>
+		

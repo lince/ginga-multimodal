@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<multimodal xmlns="http://agua.intermidia.icmc.usp.br/intermidia"
+		xmlns:inkml="http://www.w3.org/2003/InkML"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="multimodal.xsd"
+		id="idDoEventoDeTeste">
+	<head>
+		<device id="DEADBEEF-DEAF-BABA-FEED-BABE00000006"
+				model="iPhone 3GS"/>
+		<user id="59616261-6461-6261-4E50-472050325033"/>
+		<timestamp begin="2010-05-19T09:30:10.5" end="2010-05-19T09:30:17.8"/>
+	</head>
+	<body>
+		<value id="nomeDaApp">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCg==</value>
+		<value id="projeto">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCg==</value>
+
+		<text>Texto de teste 1</text>
+		<text>Texto de teste 2</text>
+
+		<inkml:ink>
+			<inkml:trace>
+				10 0, 9 14, 8 28, 7 42, 6 56, 6 70, 8 84, 8 98, 8 112, 9 126, 10 140,
+				13 154, 14 168, 17 182, 18 188, 23 174, 30 160, 38 147, 49 135,
+				58 124, 72 121, 77 135, 80 149, 82 163, 84 177, 87 191, 93 205
+			</inkml:trace>
+			<inkml:trace>
+				130 155, 144 159, 158 160, 170 154, 179 143, 179 129, 166 125,
+				152 128, 140 136, 131 149, 126 163, 124 177, 128 190, 137 200,
+				150 208, 163 210, 178 208, 192 201, 205 192, 214 180
+			</inkml:trace>
+			<inkml:trace>
+				227 50, 226 64, 225 78, 227 92, 228 106, 228 120, 229 134,
+				230 148, 234 162, 235 176, 238 190, 241 204
+			</inkml:trace>
+			<inkml:trace>
+				282 45, 281 59, 284 73, 285 87, 287 101, 288 115, 290 129,
+				291 143, 294 157, 294 171, 294 185, 296 199, 300 213
+			</inkml:trace>
+			<inkml:trace>
+				366 130, 359 143, 354 157, 349 171, 352 185, 359 197,
+				371 204, 385 205, 398 202, 408 191, 413 177, 413 163,
+				405 150, 392 143, 378 141, 365 150
+			</inkml:trace>
+		</inkml:ink>
+
+		<accel xValue="3" yValue="-2" zValue="1"/>
+
+		<voice>aqui entra um voicexml</voice>
+
+		<binary filename="file1.txt" mimetype="text/plain">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCg==</binary>
+		<binary filename="file2.txt" mimetype="text/plain">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCg==</binary>
+	</body>
+</multimodal>
+

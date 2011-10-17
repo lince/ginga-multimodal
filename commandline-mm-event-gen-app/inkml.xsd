@@ -1,0 +1,417 @@
+<xsd:schema targetNamespace="http://www.w3.org/2003/InkML" elementFormDefault="qualified" xmlns="http://www.w3.org/2003/InkML" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:annotation>
+		<xsd:documentation>
+			XML Schema for W3C InkML draft specification,
+			compliant to the LCWD (http://www.w3.org/TR/2006/WD-InkML-20061023)
+			Written by MuthuSelvam Selvaraj, HP.  (January 2008).
+			License: MIT License.
+			Copyright (c) 2008 Hewlett-Packard Development Company, L.P.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal in
+ the Software without restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+ Software, and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software. 
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+/****************************************************************************************
+ * SVN MACROS
+ *
+ * $Revision: 274 $
+ * $Author: selvarmu $
+ * $LastChangedDate: 2008-07-07 21:24:00 +0530 (Mon, 07 Jul 2008) $
+ ************************************************************************************/
+	 </xsd:documentation>
+</xsd:annotation>
+	<!-- ===============================================================-->
+	<!-- misc type definitions -->
+	<xsd:simpleType name="booleanStr.type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="T"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="units.type">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="m"/>
+			<xsd:enumeration value="cm"/>
+			<xsd:enumeration value="mm"/>
+			<xsd:enumeration value="in"/>
+			<xsd:enumeration value="pt"/>
+			<xsd:enumeration value="pc"/>
+			<xsd:enumeration value="s"/>
+			<xsd:enumeration value="ms"/>
+			<xsd:enumeration value="kg"/>
+			<xsd:enumeration value="g"/>
+			<xsd:enumeration value="mg"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="deg"/>
+			<xsd:enumeration value="rad"/>
+			<xsd:enumeration value="dev"/>
+			<xsd:enumeration value="1/m"/>
+			<xsd:enumeration value="1/cm"/>
+			<xsd:enumeration value="1/mm"/>
+			<xsd:enumeration value="1/in"/>
+			<xsd:enumeration value="1/s"/>
+			<xsd:enumeration value="1/ms"/>
+			<xsd:enumeration value="m/s"/>
+			<xsd:enumeration value="cm/s"/>
+			<xsd:enumeration value="mm/s"/>
+			<xsd:enumeration value="mm/deg"/>
+			<xsd:enumeration value="mm/rad"/>
+			<!-- meters -->
+			<!-- centimeters -->
+			<!-- millimeters -->
+			<!-- inches -->
+			<!-- points (1pt = 1/72 in) -->
+			<!-- picas (1pc = 1/22 pt) -->
+			<!-- seconds -->
+			<!-- milliseconds -->
+			<!--Kilograms -->
+			<!-- grams -->
+			<!-- milligrams -->
+			<!-- Newtons -->
+			<!-- degrees -->
+			<!-- radians -->
+			<!-- quanta relative to a device resolution. This can correspond to pixels, force levels, clock ticks, etc. -->
+			<!-- definition of '1/length' units and '1/time' units-->
+			<!-- other combined expressions of units -->
+			<!-- distance/time units for property like 'peakRate' of device for a channel -->
+			<!-- units for crossCoupling property  which is expressed in the units of two channels, eg: mm/deg-->
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ===============================================================-->
+	<!-- root element declaration -->
+	<xsd:element name="ink" type="ink.type"/>
+	<xsd:complexType name="ink.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#inkElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="definitions" type="definitions.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="context" type="context.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="traceGroup" type="traceGroup.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="trace" type="trace.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="traceView" type="traceView.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="annotationXML" type="annotationXML.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="annotation" type="annotation.type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute name="documentID" type="xsd:anyURI"/>
+	</xsd:complexType>
+	<xsd:complexType name="definitions.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#definitionsElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="context" type="context.type"/>
+			<xsd:element name="brush" type="brush.type"/>
+			<xsd:element name="traceFormat" type="traceFormat.type"/>
+			<xsd:element name="inkSource" type="inkSource.type"/>
+			<xsd:element name="trace" type="trace.type"/>
+			<xsd:element name="traceGroup" type="traceGroup.type"/>
+			<xsd:element name="traceView" type="traceView.type"/>
+			<xsd:element name="timestamp" type="timestamp.type"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="context.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#contextElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="traceFormat" type="traceFormat.type" minOccurs="0"/>
+			<xsd:element name="inkSource" type="inkSource.type"/>
+			<xsd:element name="canvas" type="canvas.type" minOccurs="0"/>
+			<xsd:element name="canvasTransform" type="canvasTransform.type" minOccurs="0"/>
+			<xsd:element name="brush" type="brush.type" minOccurs="0"/>
+			<xsd:element name="timestamp" type="timestamp.type" minOccurs="0"/>
+		</xsd:choice>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="contextRef" type="xsd:anyURI"/>
+		<xsd:attribute name="canvasRef" type="xsd:anyURI"/>
+		<xsd:attribute name="canvasTransformRef" type="xsd:anyURI"/>
+		<xsd:attribute name="traceFormatRef" type="xsd:anyURI"/>
+		<xsd:attribute name="inkSourceRef" type="xsd:anyURI"/>
+		<xsd:attribute name="brushRef" type="xsd:anyURI"/>
+		<xsd:attribute name="timestampRef" type="xsd:anyURI"/>
+	</xsd:complexType>
+	<xsd:complexType name="traceFormat.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#traceFormat</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="channel" type="channel.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="intermittentChannels" type="intermittentChannels.type" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="href" type="xsd:anyURI"/>
+	</xsd:complexType>
+	<xsd:complexType name="inkSource.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#inkSourceElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="traceFormat" type="traceFormat.type"/>
+			<xsd:element name="sampleRate" type="sampleRate.type" minOccurs="0"/>
+			<xsd:element name="latency" type="latency.type" minOccurs="0"/>
+			<xsd:element name="activeArea" type="activeArea.type" minOccurs="0"/>
+			<xsd:element name="srcProperty" type="srcProperty.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="channelProperties" type="channelProperties.type" minOccurs="0"/>
+		</xsd:choice>
+		<xsd:attribute name="id" type="xsd:ID" use="required"/>
+		<xsd:attribute name="manufacturer" type="xsd:string"/>
+		<xsd:attribute name="model" type="xsd:string"/>
+		<xsd:attribute name="serialNo" type="xsd:string"/>
+		<xsd:attribute name="specificationRef" type="xsd:anyURI"/>
+		<xsd:attribute name="description" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="sampleRate.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#sampleRate</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="uniform" type="xsd:boolean"/>
+		<xsd:attribute name="value" type="xsd:decimal" use="required"/>
+		<!-- unit of the 'value' attribute is 'samples/seconds' -->
+	</xsd:complexType>
+	<xsd:complexType name="latency.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#latency</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="value" type="xsd:decimal" use="required"/>
+		<!-- unit of the 'value' attribute is 'milliseconds' -->
+	</xsd:complexType>
+	<xsd:complexType name="activeArea.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#activeArea</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="size" type="xsd:string"/>
+		<xsd:attribute name="height" type="xsd:decimal"/>
+		<xsd:attribute name="width" type="xsd:decimal"/>
+		<xsd:attribute name="units" type="units.type"/>
+	</xsd:complexType>
+	<xsd:complexType name="srcProperty.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#srcProperty</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="value" type="xsd:decimal" use="required"/>
+		<xsd:attribute name="units" type="units.type"/>
+	</xsd:complexType>
+	<xsd:complexType name="channelProperties.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#channelProperties</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="channelProperty" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>http://www.w3.org/TR/InkML/#channelProperty</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="channel" type="xsd:string" use="required"/>
+					<xsd:attribute name="name" type="xsd:string" use="required"/>
+					<xsd:attribute name="value" type="xsd:decimal" use="required"/>
+					<xsd:attribute name="units" type="units.type"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="intermittentChannels.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#intermittentChannels</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="channel" type="channel.type" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="channel.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#channel</xsd:documentation>
+		</xsd:annotation>
+		<xsd:all>
+			<xsd:element name="mapping" type="mapping.type" minOccurs="0"/>
+		</xsd:all>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="name" type="xsd:string"/>
+		<xsd:attribute name="min" type="xsd:decimal"/>
+		<xsd:attribute name="max" type="xsd:decimal"/>
+		<xsd:attribute name="units" type="units.type"/>
+		<xsd:attribute name="type" default="DECIMAL">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="INTEGER"/>
+					<xsd:enumeration value="DECIMAL"/>
+					<xsd:enumeration value="BOOLEAN"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="default">
+			<xsd:simpleType>
+				<xsd:union memberTypes="xsd:decimal booleanStr.type"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="orientation" default="POSITIVE">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="POSITIVE"/>
+					<xsd:enumeration value="NEGATIVE"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="canvas.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#canvas</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="traceFormat" type="traceFormat.type" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="traceFormatRef" type="xsd:anyURI"/>
+	</xsd:complexType>
+	<xsd:complexType name="canvasTransform.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#canvasTransformElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="mapping" type="mapping.type"/>
+			<xsd:element name="mapping" type="mapping.type" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="invertible" type="xsd:boolean"/>
+	</xsd:complexType>
+	<xsd:complexType name="timestamp.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#timestamp</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="id" type="xsd:ID" use="required"/>
+		<xsd:attribute name="time" type="xsd:unsignedLong"/>
+		<xsd:attribute name="timestampRef" type="xsd:anyURI"/>
+		<xsd:attribute name="timeString" type="xsd:dateTime"/>
+		<xsd:attribute name="timeOffset" type="xsd:unsignedLong"/>
+	</xsd:complexType>
+	<xsd:complexType name="mapping.type" mixed="true">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#mappingElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="type" default="unknown">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="unknown"/>
+					<xsd:enumeration value="identity"/>
+					<xsd:enumeration value="lookup"/>
+					<xsd:enumeration value="affine"/>
+					<xsd:enumeration value="mathml"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="apply" default="absolute">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="absolute"/>
+					<xsd:enumeration value="relative"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="interpolation" default="linear">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="linear"/>
+					<xsd:enumeration value="floor"/>
+					<xsd:enumeration value="middle"/>
+					<xsd:enumeration value="ceiling"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="mappingRef" type="xsd:anyURI"/>
+	</xsd:complexType>
+	<xsd:complexType name="brush.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#brushElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="annotation" type="annotation.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="annotationXML" type="annotationXML.type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="brushRef" type="xsd:anyURI"/>
+	</xsd:complexType>
+	<xsd:complexType name="traceGroup.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#traceGroup</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="trace" type="trace.type" minOccurs="0"/>
+			<xsd:element name="traceGroup" type="traceGroup.type" minOccurs="0"/>
+			<xsd:element name="annotation" type="annotation.type" minOccurs="0"/>
+			<xsd:element name="annotationXML" type="annotationXML.type" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="contextRef" type="xsd:anyURI"/>
+		<xsd:attribute name="brushRef" type="xsd:anyURI"/>
+	</xsd:complexType>
+	<xsd:complexType name="trace.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#trace</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="id" type="xsd:ID"/>
+				<xsd:attribute name="type">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="penDown"/>
+							<xsd:enumeration value="penUp"/>
+							<xsd:enumeration value="indeterminate"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="contextRef" type="xsd:anyURI"/>
+				<xsd:attribute name="brushRef" type="xsd:anyURI"/>
+				<xsd:attribute name="duration" type="xsd:integer"/>
+				<xsd:attribute name="timeOffset" type="xsd:integer"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="annotation.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#annotationElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="type" type="xsd:string"/>
+				<xsd:attribute name="encoding" type="xsd:string"/>
+				<xsd:anyAttribute namespace="##any" processContents="skip"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="traceView.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#traceViewElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="traceView" type="traceView.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="annotation" type="annotation.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="annotationXML" type="annotationXML.type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="contextRef" type="xsd:anyURI"/>
+		<xsd:attribute name="traceDataRef" type="xsd:anyURI"/>
+		<xsd:attribute name="from" type="xsd:string"/>
+		<xsd:attribute name="to" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="annotationXML.type">
+		<xsd:annotation>
+			<xsd:documentation>http://www.w3.org/TR/InkML/#annotationXMLElement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:any namespace="##any" processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="type" type="xsd:string" />
+		<xsd:attribute name="encoding" type="xsd:string" />
+	</xsd:complexType>
+</xsd:schema>

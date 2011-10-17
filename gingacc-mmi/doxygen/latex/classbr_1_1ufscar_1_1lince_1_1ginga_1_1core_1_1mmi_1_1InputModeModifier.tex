@@ -1,0 +1,71 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::InputModeModifier}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeModifier}\index{br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}}
+
+
+{\ttfamily \#include $<$InputModeModifier.h$>$}
+
+Diagrama de Hierarquia para br::ufscar::lince::ginga::core::mmi::InputModeModifier:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeModifier}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf InputModeModifier} ()
+\item 
+{\bf $\sim$InputModeModifier} ()
+\item 
+virtual IInputEvent $\ast$ {\bf modifierEvent} (IInputEvent $\ast$event)=0
+\item 
+virtual int {\bf getInputModeType} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface que representa um modo de entrada de eventos que realiza modificações nos eventos. 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}!InputModeModifier@{InputModeModifier}}
+\index{InputModeModifier@{InputModeModifier}!br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}}
+\subsubsection[{InputModeModifier}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::InputModeModifier::InputModeModifier ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeModifier_ab4218c082d15f30a3e502a13afa74320}
+Constrói um modo de entrada modificador. 
+
+Referenciado por $\sim$InputModeModifier().
+
+\index{br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}!$\sim$InputModeModifier@{$\sim$InputModeModifier}}
+\index{$\sim$InputModeModifier@{$\sim$InputModeModifier}!br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}}
+\subsubsection[{$\sim$InputModeModifier}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::InputModeModifier::$\sim$InputModeModifier ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeModifier_a1cf1944c1a2b333fb8f611ae90b3c239}
+Destrói um modo de entrada modificador. 
+
+Referências InputModeModifier().
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}!getInputModeType@{getInputModeType}}
+\index{getInputModeType@{getInputModeType}!br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}}
+\subsubsection[{getInputModeType}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::ginga::core::mmi::InputModeModifier::getInputModeType ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeModifier_a75a4129026ec1170e25defb04d00a1a3}
+Retorna a constante inteira que representa o tipo de modo de entrada modificador. \begin{DoxyReturn}{Retorna}
+Constante inteira que representa o tipo de modo de entrada modificador. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IInputMode} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IInputMode_a54f7e96cd446cf07e781cd07d55ae99a}.
+
+\index{br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}!modifierEvent@{modifierEvent}}
+\index{modifierEvent@{modifierEvent}!br::ufscar::lince::ginga::core::mmi::InputModeModifier@{br::ufscar::lince::ginga::core::mmi::InputModeModifier}}
+\subsubsection[{modifierEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual IInputEvent$\ast$ br::ufscar::lince::ginga::core::mmi::InputModeModifier::modifierEvent (IInputEvent $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1InputModeModifier_a2f40986cf4645277016d0d923a208b0a}
+Módifica o evento de entrada recebido conforme. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em event}]evento de entrada a ser modificado. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O evento de entrada resultado da modificação. 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/{\bf InputModeModifier.h}\item 
+src/InputModeModifier.cpp\end{DoxyCompactItemize}

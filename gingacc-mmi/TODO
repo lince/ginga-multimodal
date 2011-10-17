@@ -1,0 +1,49 @@
+Existentes na primeira versão, que ainda precisam ser checados:
+ - Não fazer include usando cominho absoluto em MultimodalInputEvent.h
+- Fazer com que os drivers não precisem usar -I/usr/local/include/directfb/ no Makefile.am da pasta src
+- Entender porque o configure.in do ginga-cpp e do inputmode não podem checar todas as libs.
+	Tivemos que comentar a checagem de algumas porque o autogen não tava encontrando-as. 
+- Não instalar a classe DFBMultimodalInputEvent
+- Permitir que a aplicação indique que tipo de evento multimodal ela quer escutar, para ela não ser
+	obrigada a escutar todos os eventos multimodais.
+- Implementar removeValue em MultimodalInputEvent
+- Criar IMultimodalInputEvent
+- void MultimodalInputEvent::addValue(string name, void* value) ->Não permitir duas vezes o mesmo name.
+
+- Provavemente o run tava sendo chamado no InputManager e no EnhancedInputManager porque ele não foi declarado
+	como virtual em InputManager. Em vez de comentar a implementação em InputManager, podemos acrescentar a
+	palavra virtual na declaração também em InputManager.
+	
+- Testar necessidade de construtor do EnhancedInputManager repetir chamadas do InputManager.
+- Ver relação entre eventos multimodal e o redirecter.
+
+Novos:
+- Abort é mostrado ao final da execução de sample03.ncl caso o componente
+gingacc-system seja recompilado usando o fonte do svn. Não tem nada a ver com o
+CIM. Ver tópico
+http://www.softwarepublico.gov.br/dotlrn/clubs/ginga/forums/message-view?message_id=21779532
+
+- Mudar o namespace para não conter o nome ufscar e lince e assim tornar o
+	componente mais geral e atrativo para ser usada por outras instituições?
+
+- Chamar o destrutor do Evento Multimodal alguma hora.
+
+- Criar atributos, getters e setters para os dados do cabeçalho de um evento.
+Hoje, esses dados estão guardados no mapa de chave/valor.
+
+- Testar novamente com aplicação de envio pelo IPhone de Tim
+
+- Mostrar o perror no método startSocket
+
+- Fazer a recepção do evento XML via UPnP
+
+- Descobrir como gerar dados em base64
+
+- Descobrir como gerar uuid
+- Validar restrições sobre o tipo uuid colocadas no schema
+
+- Fazer com que o parser do protocolo valide o xml sendo parseado usando o
+	schema. Hoje a validação não está sendo feita pelo componente. Sabemos que
+	nosso xml de exemplo e nosso schema estão válidos pois usamos a ferramenta
+	de linha de comando do linux chamada xmllint (xmllint --noout --schema
+	multimodal.xsd eventoMultimodal.xml)

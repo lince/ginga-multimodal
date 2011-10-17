@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* GingaChatAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 620}}";
+			sepNavSelRange = "{438, 23}";
+			sepNavVisRange = "{0, 486}";
+		};
+	};
+	1D3623250D0F684500981E51 /* GingaChatAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 832}}";
+			sepNavSelRange = "{609, 0}";
+			sepNavVisRange = "{145, 1579}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* GingaChat */ = {
+		activeExec = 0;
+		executables = (
+			594CEC2912242E28005D3F69 /* GingaChat */,
+		);
+	};
+	2899E5210DE3E06400AC0155 /* GingaChatViewController.xib */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 8372}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{13513, 2161}";
+		};
+	};
+	28D7ACF60DDB3853001CB0EB /* GingaChatViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 622}}";
+			sepNavSelRange = "{373, 0}";
+			sepNavVisRange = "{0, 1519}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* GingaChatViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1086, 2587}}";
+			sepNavSelRange = "{1018, 0}";
+			sepNavVisRange = "{736, 664}";
+			sepNavWindowFrame = "{{85, 194}, {750, 558}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 594CEC2912242E28005D3F69 /* GingaChat */;
+		activeSDKPreference = iphonesimulator3.2;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* GingaChat */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* GingaChat */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 594CEC3412242E46005D3F69 /* Code sense */;
+		executables = (
+			594CEC2912242E28005D3F69 /* GingaChat */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					783,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 306438763;
+			PBXWorkspaceStateSaveDate = 306438763;
+		};
+		perUserProjectItems = {
+			5935D5C21224B49B00B730D8 /* PBXBookmark */ = 5935D5C21224B49B00B730D8 /* PBXBookmark */;
+			5935D5C61224B49B00B730D8 /* PBXTextBookmark */ = 5935D5C61224B49B00B730D8 /* PBXTextBookmark */;
+			5935D5D31224B4ED00B730D8 /* PBXTextBookmark */ = 5935D5D31224B4ED00B730D8 /* PBXTextBookmark */;
+			5935D5F61224C0FA00B730D8 /* PBXTextBookmark */ = 5935D5F61224C0FA00B730D8 /* PBXTextBookmark */;
+			5935D61D1224C97600B730D8 /* PBXTextBookmark */ = 5935D61D1224C97600B730D8 /* PBXTextBookmark */;
+			5946FD01122C9FD700A5C65C /* PBXTextBookmark */ = 5946FD01122C9FD700A5C65C /* PBXTextBookmark */;
+			5946FD02122C9FD700A5C65C /* PBXTextBookmark */ = 5946FD02122C9FD700A5C65C /* PBXTextBookmark */;
+			5946FD03122C9FD700A5C65C /* PBXTextBookmark */ = 5946FD03122C9FD700A5C65C /* PBXTextBookmark */;
+			598399C41243E2AC0064671B /* PBXTextBookmark */ = 598399C41243E2AC0064671B /* PBXTextBookmark */;
+			59901C24122EBA300066D1C6 /* PBXTextBookmark */ = 59901C24122EBA300066D1C6 /* PBXTextBookmark */;
+			59901C25122EBA300066D1C6 /* PBXTextBookmark */ = 59901C25122EBA300066D1C6 /* PBXTextBookmark */;
+			59901C26122EBA300066D1C6 /* PBXTextBookmark */ = 59901C26122EBA300066D1C6 /* PBXTextBookmark */;
+			59A0BF87122AAC1900E77FA6 /* PBXTextBookmark */ = 59A0BF87122AAC1900E77FA6 /* PBXTextBookmark */;
+			59C2DE1D1230B5E800ED3A74 /* PBXTextBookmark */ = 59C2DE1D1230B5E800ED3A74 /* PBXTextBookmark */;
+			59D981291226ECD200155A8B /* PlistBookmark */ = 59D981291226ECD200155A8B /* PlistBookmark */;
+			59D9812B1226ECD200155A8B /* PBXTextBookmark */ = 59D9812B1226ECD200155A8B /* PBXTextBookmark */;
+			59D9815112274B0F00155A8B /* PBXTextBookmark */ = 59D9815112274B0F00155A8B /* PBXTextBookmark */;
+		};
+		sourceControlManager = 594CEC3312242E46005D3F69 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	32CA4F630368D1EE00C91783 /* GingaChat_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 187}";
+		};
+	};
+	5935D5C21224B49B00B730D8 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 5935D59512246BEC00B730D8 /* error.png */;
+	};
+	5935D5C61224B49B00B730D8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 594CEC4212242EC8005D3F69 /* ServicesBrowser.h */;
+		name = "ServicesBrowser.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1748;
+		vrLoc = 177;
+	};
+	5935D5D31224B4ED00B730D8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 594CEC3F12242EC8005D3F69 /* Connection.h */;
+		name = "Connection.h: 36";
+		rLen = 6;
+		rLoc = 849;
+		rType = 0;
+		vrLen = 947;
+		vrLoc = 0;
+	};
+	5935D5F61224C0FA00B730D8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 594CEC4112242EC8005D3F69 /* ServicesBrowserDelegate.h */;
+		name = "ServicesBrowserDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1517;
+		vrLoc = 0;
+	};
+	5935D61D1224C97600B730D8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 594CEC4312242EC8005D3F69 /* ServicesBrowser.m */;
+		name = "ServicesBrowser.m: 63";
+		rLen = 0;
+		rLoc = 2057;
+		rType = 0;
+		vrLen = 1042;
+		vrLoc = 1425;
+	};
+	5946FD01122C9FD700A5C65C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 594CEC4712242EFB005D3F69 /* ServicesListViewController.m */;
+		name = "ServicesListViewController.m: 13";
+		rLen = 0;
+		rLoc = 272;
+		rType = 0;
+		vrLen = 1225;
+		vrLoc = 0;
+	};
+	5946FD02122C9FD700A5C65C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* GingaChatAppDelegate.h */;
+		name = "GingaChatAppDelegate.h: 19";
+		rLen = 23;
+		rLoc = 438;
+		rType = 0;
+		vrLen = 486;
+		vrLoc = 0;
+	};
+	5946FD03122C9FD700A5C65C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* GingaChatAppDelegate.m */;
+		name = "GingaChatAppDelegate.m: 25";
+		rLen = 0;
+		rLoc = 609;
+		rType = 0;
+		vrLen = 1579;
+		vrLoc = 145;
+	};
+	594CEC2912242E28005D3F69 /* GingaChat */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = GingaChat;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	594CEC3312242E46005D3F69 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	594CEC3412242E46005D3F69 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	594CEC3F12242EC8005D3F69 /* Connection.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {964, 645}}";
+			sepNavSelRange = "{849, 6}";
+			sepNavVisRange = "{0, 947}";
+		};
+	};
+	594CEC4012242EC8005D3F69 /* Connection.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 2119}}";
+			sepNavSelRange = "{404, 0}";
+			sepNavVisRange = "{936, 1224}";
+		};
+	};
+	594CEC4112242EC8005D3F69 /* ServicesBrowserDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {964, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1517}";
+		};
+	};
+	594CEC4212242EC8005D3F69 /* ServicesBrowser.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {964, 767}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{177, 1748}";
+			sepNavWindowFrame = "{{62, 215}, {750, 558}}";
+		};
+	};
+	594CEC4312242EC8005D3F69 /* ServicesBrowser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {964, 2418}}";
+			sepNavSelRange = "{2057, 0}";
+			sepNavVisRange = "{1425, 1042}";
+		};
+	};
+	594CEC4612242EFB005D3F69 /* ServicesListViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 645}}";
+			sepNavSelRange = "{648, 0}";
+			sepNavVisRange = "{0, 824}";
+		};
+	};
+	594CEC4712242EFB005D3F69 /* ServicesListViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 2405}}";
+			sepNavSelRange = "{272, 0}";
+			sepNavVisRange = "{0, 1225}";
+		};
+	};
+	598399C41243E2AC0064671B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 594CEC4012242EC8005D3F69 /* Connection.m */;
+		name = "Connection.m: 23";
+		rLen = 0;
+		rLoc = 404;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 936;
+	};
+	59901C24122EBA300066D1C6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 59D9811D1226EAD000155A8B /* comeco.xml */;
+		name = "comeco.xml: 11";
+		rLen = 0;
+		rLoc = 414;
+		rType = 0;
+		vrLen = 477;
+		vrLoc = 0;
+	};
+	59901C25122EBA300066D1C6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* GingaChatViewController.m */;
+		name = "GingaChatViewController.m: 40";
+		rLen = 0;
+		rLoc = 1018;
+		rType = 0;
+		vrLen = 1533;
+		vrLoc = 148;
+	};
+	59901C26122EBA300066D1C6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* GingaChatViewController.h */;
+		name = "GingaChatViewController.h: 14";
+		rLen = 0;
+		rLoc = 373;
+		rType = 0;
+		vrLen = 1519;
+		vrLoc = 0;
+	};
+	59A0BF87122AAC1900E77FA6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 594CEC4612242EFB005D3F69 /* ServicesListViewController.h */;
+		name = "ServicesListViewController.h: 22";
+		rLen = 0;
+		rLoc = 648;
+		rType = 0;
+		vrLen = 824;
+		vrLoc = 0;
+	};
+	59C2DE1D1230B5E800ED3A74 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 594CEC4012242EC8005D3F69 /* Connection.m */;
+		name = "Connection.m: 23";
+		rLen = 0;
+		rLoc = 404;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 191;
+	};
+	59D9811D1226EAD000155A8B /* comeco.xml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 645}}";
+			sepNavSelRange = "{414, 0}";
+			sepNavVisRange = "{0, 477}";
+		};
+	};
+	59D981291226ECD200155A8B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* GingaChat-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/josecostamartins/Documents/Projetos Xcode/GingaChat/GingaChat-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	59D9812B1226ECD200155A8B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* GingaChat_Prefix.pch */;
+		name = "GingaChat_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 187;
+		vrLoc = 0;
+	};
+	59D981321226ECD200155A8B /* RootViewController.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = RootViewController.m;
+		path = "/Volumes/Backup/iPhone Programming/iaiCurso/IPHONE SDK 1/EXEMPLOS/PropertyList/Classes/RootViewController.m";
+		sourceTree = "<absolute>";
+	};
+	59D9815112274B0F00155A8B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 59D981321226ECD200155A8B /* RootViewController.m */;
+		name = "RootViewController.m: 18";
+		rLen = 160;
+		rLoc = 269;
+		rType = 0;
+		vrLen = 1242;
+		vrLoc = 0;
+	};
+}

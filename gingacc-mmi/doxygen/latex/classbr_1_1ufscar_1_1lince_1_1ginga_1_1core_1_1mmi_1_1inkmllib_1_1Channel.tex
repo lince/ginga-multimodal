@@ -1,0 +1,108 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel}\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+
+
+{\ttfamily \#include $<$Channel.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Channel} (char $\ast${\bf name}, long {\bf min}, long {\bf max}, char $\ast${\bf units})
+\item 
+{\bf Channel} (char $\ast${\bf name}, long {\bf min}, long {\bf max}, INKML\_\-UNITS {\bf units})
+\item 
+{\bf Channel} (char $\ast${\bf name})
+\item 
+INKML\_\-UNITS {\bf getUnit} ()
+\item 
+char $\ast$ {\bf getName} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf name}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_ac3fd31c3bc013d532a0203f5c7dd03c2}
+
+\begin{DoxyCompactList}\small\item\em to store the 'name' attribute value. It is a mandatory field. \item\end{DoxyCompactList}\item 
+long {\bf min}
+\item 
+long {\bf max}
+\item 
+INKML\_\-UNITS {\bf units}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que representa um channel de um InkML, responsável por descrever os dados que podem estar codificados em um trace. Mais informações em {\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}!Channel@{Channel}}
+\index{Channel@{Channel}!br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+\subsubsection[{Channel}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::inkmllib::Channel::Channel (char $\ast$ {\em name}, \/  long {\em lMin}, \/  long {\em lMax}, \/  char $\ast$ {\em units})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_aa3e960fe2aa36a932f71aa865e05e9cb}
+Cria um channel. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em name}]Nome do channel. \item[{\em min}]Limite inferior para os valores do channel \item[{\em max}]Limite superior para os valores do channel \item[{\em units}]Unidade em quem os valores do channel estão expressos.\end{DoxyParams}
+Desc -\/ constructors 
+
+Referências getUnit().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}!Channel@{Channel}}
+\index{Channel@{Channel}!br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+\subsubsection[{Channel}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::inkmllib::Channel::Channel (char $\ast$ {\em name}, \/  long {\em min}, \/  long {\em max}, \/  INKML\_\-UNITS {\em units})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_a8e5283c07e679c8d775e27af9646d7e2}
+Cria um channel. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em name}]Nome do channel. \item[{\em min}]Limite inferior para os valores do channel \item[{\em max}]Limite superior para os valores do channel \item[{\em units}]Unidade em quem os valores do channel estão expressos. \end{DoxyParams}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}!Channel@{Channel}}
+\index{Channel@{Channel}!br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+\subsubsection[{Channel}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::inkmllib::Channel::Channel (char $\ast$ {\em name})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_ad5a623c7eaf864aa70975dd68fc3f92c}
+Cria um channel. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em name}]Nome do channel. \end{DoxyParams}
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}!getName@{getName}}
+\index{getName@{getName}!br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+\subsubsection[{getName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ br::ufscar::lince::ginga::core::mmi::inkmllib::Channel::getName ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_a37739476bcdd2f22c8bc003e414ce463}
+Retorna o nome do channel. \begin{DoxyReturn}{Retorna}
+O nome 
+\end{DoxyReturn}
+
+
+Referências name.
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}!getUnit@{getUnit}}
+\index{getUnit@{getUnit}!br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+\subsubsection[{getUnit}]{\setlength{\rightskip}{0pt plus 5cm}INKML\_\-UNITS br::ufscar::lince::ginga::core::mmi::inkmllib::Channel::getUnit ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_afefeeb319bedbc32dd9fe11a170e532f}
+Retorna a unidade em que os valores do channel estão expressos. \begin{DoxyReturn}{Retorna}
+A unidade 
+\end{DoxyReturn}
+
+
+Referências units.
+
+
+
+Referenciado por Channel().
+
+
+
+\subsection{Atributos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}!max@{max}}
+\index{max@{max}!br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Channel::max}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_a52f9bda1d956ebff8c5228b1ae88e2a3}
+to store the 'max' attribute value. It gives the max range of channel data value. \index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}!min@{min}}
+\index{min@{min}!br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Channel::min}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_a8d163f255bed6fc5edb97a66da6a5c89}
+to store the 'min' attribute value. It gives the min range of channel data value. \index{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}!units@{units}}
+\index{units@{units}!br::ufscar::lince::ginga::core::mmi::inkmllib::Channel@{br::ufscar::lince::ginga::core::mmi::inkmllib::Channel}}
+\subsubsection[{units}]{\setlength{\rightskip}{0pt plus 5cm}INKML\_\-UNITS {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Channel::units}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Channel_abb63621653a13bab4cdfe575af4ce578}
+If value not given for min and/or max then the channel value is unbounded in either direction to store the 'units' attribute value. 
+
+Referenciado por getUnit().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/Channel.h\item 
+src/Channel.cpp\end{DoxyCompactItemize}

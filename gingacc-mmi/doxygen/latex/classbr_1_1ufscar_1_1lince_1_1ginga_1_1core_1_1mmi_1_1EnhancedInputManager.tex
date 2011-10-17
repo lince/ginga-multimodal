@@ -1,0 +1,647 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager}\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+
+
+{\ttfamily \#include $<$EnhancedInputManager.h$>$}
+
+Diagrama de Hierarquia para br::ufscar::lince::ginga::core::mmi::EnhancedInputManager:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf release} ()
+\item 
+virtual void {\bf addInputEventListener} (IInputEventListener $\ast$listener, set$<$ int $>$ $\ast$events=NULL)
+\item 
+virtual void {\bf removeInputEventListener} (IInputEventListener $\ast$listener)
+\item 
+virtual void {\bf addApplicationInputEventListener} (IInputEventListener $\ast$listener)
+\item 
+virtual void {\bf removeApplicationInputEventListener} (IInputEventListener $\ast$listener)
+\item 
+virtual void {\bf postEvent} (IInputEvent $\ast$event)
+\item 
+virtual void {\bf postEvent} (int keyCode)
+\item 
+virtual void {\bf setAxisValues} (int x, int y, int z)
+\item 
+virtual void {\bf setAxisBoundaries} (int x, int y, int z)
+\item 
+virtual int {\bf getCurrentXAxisValue} ()
+\item 
+virtual int {\bf getCurrentYAxisValue} ()
+\item 
+virtual void {\bf addInputMode} (string inputModeId, {\bf IInputMode} $\ast$inputMode)
+\item 
+virtual {\bf IInputMode} $\ast$ {\bf removeInputMode} (string inputModeId)
+\item 
+virtual {\bf IInputMode} $\ast$ {\bf getInputMode} (string inputModeId)
+\item 
+virtual void {\bf gotoInputMode} (string inputModeId)
+\item 
+virtual void {\bf addMultimodalInputEventListener} ({\bf IMultimodalInputEventListener} $\ast$listener)
+\item 
+virtual void {\bf removeMultimodalInputEventListener} ({\bf IMultimodalInputEventListener} $\ast$listener)
+\item 
+virtual void {\bf postMultimodalEvent} ({\bf IMultimodalInputEvent} $\ast$multimodalInputEvent)
+\item 
+virtual void {\bf postMultimodalEvent} (string xml)
+\item 
+virtual int {\bf addCode} (string codeStr)
+\item 
+virtual bool {\bf removeCode} (int code)
+\item 
+virtual bool {\bf removeCode} (string codeStr)
+\item 
+virtual bool {\bf hasCode} (int code)
+\item 
+virtual bool {\bf hasCode} (string codeStr)
+\item 
+virtual void {\bf waitForUnlockCondition} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf EnhancedInputManager} $\ast$ {\bf getInstance} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf EnhancedInputManager} ()
+\item 
+{\bf $\sim$EnhancedInputManager} ()
+\item 
+void {\bf initializeInputIntervalTime} ()
+\item 
+void {\bf nextInputMode} ()
+\item 
+virtual bool {\bf dispatchMultimodalEvent} ({\bf IMultimodalInputEvent} $\ast$multimodalInputEvent)
+\item 
+virtual void {\bf performMultimodalInputLockedActions} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf IInputMode} $\ast$ $>$ $\ast$ {\bf inputModes}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a6e5fff9b63e9a45109a49f7b95f9205c}
+
+\begin{DoxyCompactList}\small\item\em Conjunto de modos de entrada. \item\end{DoxyCompactList}\item 
+map$<$ string, {\bf IInputMode} $\ast$ $>$ $\ast$ {\bf inputModeMap}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ae7c37f3aae2e48cd1820cc42dc7ca3dc}
+
+\begin{DoxyCompactList}\small\item\em Mapeamento entro o nome do modo de entrada e sua instância. \item\end{DoxyCompactList}\item 
+{\bf IInputMode} $\ast$ {\bf currentInputMode}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_aab9106c9072222655fb2865c2121d801}
+
+\begin{DoxyCompactList}\small\item\em Indica o modo de entrada atualmente usado. \item\end{DoxyCompactList}\item 
+int {\bf inputModeIndex}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a17320fd9d0525442ca45f43ead03e1de}
+
+\begin{DoxyCompactList}\small\item\em Indica o índice do modo de entrada atualmente usado. \item\end{DoxyCompactList}\item 
+HLoggerPtr {\bf logger}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ae9f367cfff019213aa973c5e70369bd6}
+
+\begin{DoxyCompactList}\small\item\em Responsável pelo controle das mensagens de log. \item\end{DoxyCompactList}\item 
+set$<$ {\bf IMultimodalInputEventListener} $\ast$ $>$ $\ast$ {\bf multimodalEventListeners}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a20b5337fd0ec2f696a2048bdf633fd94}
+
+\begin{DoxyCompactList}\small\item\em Conjunto de observadores de eventos multimodais. \item\end{DoxyCompactList}\item 
+vector$<$ {\bf LockedMultimodalAction} $\ast$ $>$ $\ast$ {\bf actionsToMultimodalListeners}
+\item 
+bool {\bf notifyingMultimodal}
+\item 
+pthread\_\-mutex\_\-t {\bf multimodalMutex}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a803cbbaac8ced4586e74dc72255cb29a}
+
+\begin{DoxyCompactList}\small\item\em Controla o acesso concorrente ao multimodalEventListeners. \item\end{DoxyCompactList}\item 
+pthread\_\-mutex\_\-t {\bf actMultimodalMutex}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a74c2903df33d8ee7d36225b00ab9d906}
+
+\begin{DoxyCompactList}\small\item\em Controla o acesso concorrente ao actionsToMultimodalListeners. \item\end{DoxyCompactList}\item 
+CodeMap $\ast$ {\bf codeMap}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a6809eff2881564b14c89ae01e1372317}
+
+\begin{DoxyCompactList}\small\item\em Instância utilizada para adicionar novos códigos de teclas. \item\end{DoxyCompactList}\item 
+map$<$ IInputEventListener $\ast$, set$<$ int $>$ $\ast$ $>$ $\ast$ {\bf eventListeners}
+\item 
+vector$<$ {\bf LockedAction} $\ast$ $>$ $\ast$ {\bf actionsToInpListeners}
+\item 
+set$<$ IInputEventListener $\ast$ $>$ $\ast$ {\bf applicationListeners}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ab1445054a3c2b41ddaca538b05d9e7d4}
+
+\begin{DoxyCompactList}\small\item\em Conjunto de observadores de aplicações. \item\end{DoxyCompactList}\item 
+vector$<$ {\bf LockedAction} $\ast$ $>$ $\ast$ {\bf actionsToAppListeners}
+\item 
+bool {\bf running}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a43581d244a0e6c4775d10e27d3d34d9b}
+
+\begin{DoxyCompactList}\small\item\em Denota que o InputManager está em execução. \item\end{DoxyCompactList}\item 
+bool {\bf notifying}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a7d1c0dade0b030518232074c800f78a0}
+
+\begin{DoxyCompactList}\small\item\em Denota se o InputManager deve notificar seus listeners. \item\end{DoxyCompactList}\item 
+bool {\bf notifyingApp}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a21a28fdfac85367750774821cd587741}
+
+\begin{DoxyCompactList}\small\item\em Denota se o InputManager deve notificar as aplicações. \item\end{DoxyCompactList}\item 
+IEventBuffer $\ast$ {\bf eventBuffer}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a5d50a61babd99c13e4e714257bffc806}
+
+\begin{DoxyCompactList}\small\item\em Buffer que armazena os eventos que devem ser processados e despachados. \item\end{DoxyCompactList}\item 
+double {\bf lastEventTime}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a9852aa6d23e4856d81df46f36c2d18fa}
+
+\begin{DoxyCompactList}\small\item\em Registra o tempo de ocorrencia do último evento. \item\end{DoxyCompactList}\item 
+double {\bf timeStamp}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a9ccaaefa7388090883593b64c5663c66}
+
+\begin{DoxyCompactList}\small\item\em Utilizado para armazenar o tempo do evento atual. \item\end{DoxyCompactList}\item 
+double {\bf imperativeIntervalTime}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a884bef9c38cb5f8512ac23c4c7dda80e}
+
+\begin{DoxyCompactList}\small\item\em Armazena o intervalo minimo para detectar eventos imperativos. \item\end{DoxyCompactList}\item 
+double {\bf declarativeIntervalTime}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a3f155cda29980c2ee5ba32faa568f814}
+
+\begin{DoxyCompactList}\small\item\em Armazena o intervalo minimo para detectar eventos declarativos. \item\end{DoxyCompactList}\item 
+int {\bf currentXAxis}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a5313a5b41578e9ea0590c01ae4448c23}
+
+\begin{DoxyCompactList}\small\item\em Posição do eixo X atual. \item\end{DoxyCompactList}\item 
+int {\bf currentYAxis}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a778bc03e9d579a4f79b6e9754123422c}
+
+\begin{DoxyCompactList}\small\item\em Posição do eixo Y atual. \item\end{DoxyCompactList}\item 
+int {\bf maxX}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a371866ab633322ef75240da4fe892e2f}
+
+\begin{DoxyCompactList}\small\item\em Valor máximo do eixo X. \item\end{DoxyCompactList}\item 
+int {\bf maxY}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a8100fb2d243ffeaeb72928881f7d5284}
+
+\begin{DoxyCompactList}\small\item\em Valor máximo do eixo Y. \item\end{DoxyCompactList}\item 
+pthread\_\-mutex\_\-t {\bf actAppMutex}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a29d51653cb0fdc17bae852976d162235}
+
+\begin{DoxyCompactList}\small\item\em Controla acesso concorrente à lista actionsToAppListeners. \item\end{DoxyCompactList}\item 
+pthread\_\-mutex\_\-t {\bf actInpMutex}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ae6d773c92a437e94f025d16561bbd74b}
+
+\begin{DoxyCompactList}\small\item\em Controla acesso concorrente à lista actionsToInpListeners. \item\end{DoxyCompactList}\item 
+pthread\_\-mutex\_\-t {\bf appMutex}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a648a33c1a2b3d1ec2d127528db3352a9}
+
+\begin{DoxyCompactList}\small\item\em Controla acesso concorrente à lista applicationListeners. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf EnhancedInputManager} $\ast$ {\bf \_\-instance} = NULL\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a0ce47bd3c8357ff0cc0759b602a57196}
+
+\begin{DoxyCompactList}\small\item\em Instância única do \doxyref{EnhancedInputManager}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager}. \item\end{DoxyCompactList}\item 
+static int {\bf KEY\_\-MODE\_\-CHANGE} = 61968\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a6889b8a679ac4ebef8a0f6ca4cef91d6}
+
+\begin{DoxyCompactList}\small\item\em Código de tecla de um evento que indica mudança do modo de entrada. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Essa classe visa substituir o InputManager do componente Ginga-\/CC System IO. Ela implementa a interface IEnhacedInputManager, que estende IInputManager. Essa classe não estende a classe EnhacendInputManager pois assim evitamos: \par
+
+\begin{DoxyItemize}
+\item O problema do singleton estendido\par
+
+\item O problema de ter que implementar no EIM métodos que simplesmente servem para chamar os métodos já implementados do IM, pelo fato deles não estarem acessíveis mesmo sendo herdados.\par
+
+\item O problema de o InputManager.h não ser instalado junto com os demais includes do Ginga no sistema. Apenas sua interface IInputManager.h é instalada.\par
+ Essa decisão é válida também porque, além de simplificar muito o entendimento do código, quem usa a extensão, não tem mais o menor interesse em ter a versão não estendida em paralelo. 
+\end{DoxyItemize}
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!EnhancedInputManager@{EnhancedInputManager}}
+\index{EnhancedInputManager@{EnhancedInputManager}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{EnhancedInputManager}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::EnhancedInputManager ()\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ab1332f39609e66bd54fb7649fc8a26b8}
+Constrói a instância única do \doxyref{EnhancedInputManager}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager} 
+
+Referências actAppMutex, actInpMutex, actionsToAppListeners, actionsToInpListeners, actionsToMultimodalListeners, actMultimodalMutex, applicationListeners, appMutex, codeMap, currentInputMode, currentXAxis, currentYAxis, eventBuffer, eventListeners, getInstance(), initializeInputIntervalTime(), inputModeIndex, inputModeMap, inputModes, lastEventTime, logger, maxX, maxY, multimodalEventListeners, multimodalMutex, notifying, notifyingApp, notifyingMultimodal e running.
+
+
+
+Referenciado por getInstance().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!$\sim$EnhancedInputManager@{$\sim$EnhancedInputManager}}
+\index{$\sim$EnhancedInputManager@{$\sim$EnhancedInputManager}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{$\sim$EnhancedInputManager}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::$\sim$EnhancedInputManager ()\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_aff3634c4d9a2cb034394fdd24bf31c8e}
+Destrói o \doxyref{EnhancedInputManager}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager}. 
+
+Referências \_\-instance e logger.
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!addApplicationInputEventListener@{addApplicationInputEventListener}}
+\index{addApplicationInputEventListener@{addApplicationInputEventListener}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{addApplicationInputEventListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::addApplicationInputEventListener (IInputEventListener $\ast$ {\em listener})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a134d1ab1b40af56590bd10d0fe5f4e74}
+Registra um observador de eventos de aplicação. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em listener}]O observador a ser registrado. \end{DoxyParams}
+
+
+Referências actAppMutex, actionsToAppListeners, applicationListeners, appMutex, lockedListenerAction::events, lockedListenerAction::isAdd, lockedListenerAction::l, notifyingApp e running.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!addCode@{addCode}}
+\index{addCode@{addCode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{addCode}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::addCode (string {\em codeStr})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ae712d436ac1e9a101ac83051905db21b}
+Adiciona um novo código de tecla. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em codeStr}]Identificador da nova tecla. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Código atribuido à tecla. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_abd69b86a5205125e16ff3498f9fbcc6e}.
+
+
+
+Referências codeMap.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!addInputEventListener@{addInputEventListener}}
+\index{addInputEventListener@{addInputEventListener}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{addInputEventListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::addInputEventListener (IInputEventListener $\ast$ {\em listener}, \/  set$<$ int $>$ $\ast$ {\em events} = {\ttfamily NULL})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ab962318f78d6303ad28cabf5ae17f53c}
+Registra um observador de eventos. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em listener}]O observador a ser registrado. \item[{\em events}]Conjunto de eventos de interesse. \end{DoxyParams}
+
+
+Referências actInpMutex, actionsToInpListeners, eventListeners, lockedListenerAction::events, lockedListenerAction::isAdd, lockedListenerAction::l, notifying e running.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!addInputMode@{addInputMode}}
+\index{addInputMode@{addInputMode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{addInputMode}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::addInputMode (string {\em inputModeId}, \/  {\bf IInputMode} $\ast$ {\em inputMode})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a9f2d1868f1a67f2f51e1df07484d5be1}
+Adicina um novo modo de entrada. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em inputModeId}]Id do novo modo de entrada. \item[{\em inputMode}]Novo modo de entrada. \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+\item[{\em BadArgumentException}]se inputMode for nulo. \item[{\em \doxyref{DuplicateException}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1DuplicateException}}]se outro modo já adicionado possuir inputModeName como identificador. \end{DoxyExceptions}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_ac3620e81bb403ee7468de5752095ac0a}.
+
+
+
+Referências inputModeMap, inputModes e logger.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!addMultimodalInputEventListener@{addMultimodalInputEventListener}}
+\index{addMultimodalInputEventListener@{addMultimodalInputEventListener}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{addMultimodalInputEventListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::addMultimodalInputEventListener ({\bf IMultimodalInputEventListener} $\ast$ {\em listener})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_af2f533b4ca43c0df2f712ef04183d166}
+Registra um observador de eventos multimodais. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em listener}]O observador a ser registrado. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a5be22768c393249571ded39e79ed8dda}.
+
+
+
+Referências actionsToMultimodalListeners, actMultimodalMutex, lockedMultimodalListenerAction::isAdd, lockedMultimodalListenerAction::l, logger, multimodalEventListeners, multimodalMutex, notifying, performMultimodalInputLockedActions() e running.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!dispatchMultimodalEvent@{dispatchMultimodalEvent}}
+\index{dispatchMultimodalEvent@{dispatchMultimodalEvent}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{dispatchMultimodalEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::dispatchMultimodalEvent ({\bf IMultimodalInputEvent} $\ast$ {\em multimodalInputEvent})\hspace{0.3cm}{\ttfamily  [protected, virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a67b3b8dcf42c63ad7ee9914521eaacc7}
+Notifica os observadores da ocorrência de um evento multimodal. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em multimodalInputEvent}]Evento sendo notificado. \end{DoxyParams}
+
+
+Referências logger, multimodalEventListeners, multimodalMutex, notifying, notifyingMultimodal, performMultimodalInputLockedActions() e running.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!getCurrentXAxisValue@{getCurrentXAxisValue}}
+\index{getCurrentXAxisValue@{getCurrentXAxisValue}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{getCurrentXAxisValue}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::getCurrentXAxisValue ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a323118f859ef613f681321e7a80277d4}
+Acessa a posição atual do ponteiro do mouse na coordenada x. \begin{DoxyReturn}{Retorna}
+A posição atual do ponteiro do mouse na coordenada x. 
+\end{DoxyReturn}
+
+
+Referências currentXAxis.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!getCurrentYAxisValue@{getCurrentYAxisValue}}
+\index{getCurrentYAxisValue@{getCurrentYAxisValue}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{getCurrentYAxisValue}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::getCurrentYAxisValue ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_aed7edfbbd1c856b97bfa01fedab77709}
+Acessa a posição atual do ponteiro do mouse na coordenada y. \begin{DoxyReturn}{Retorna}
+A posição atual do ponteiro do mouse na coordenada y. 
+\end{DoxyReturn}
+
+
+Referências currentYAxis.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!getInputMode@{getInputMode}}
+\index{getInputMode@{getInputMode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{getInputMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IInputMode} $\ast$ br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::getInputMode (string {\em inputModeId})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a6d3cd7e5533be32dc80f1f8659bd5920}
+Acessa um modo de entrada previamente adicionado. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em inputModeId}]Id do modo de entrada a ser acessado. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O modo de entrada ou NULL caso o modo não seja encontrado. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_acef61e560c6a3576d4530ce6c8db125a}.
+
+
+
+Referências inputModeMap e logger.
+
+
+
+Referenciado por gotoInputMode().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EnhancedInputManager} $\ast$ br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::getInstance ()\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a50781e4a3b4d17d99614f267e098be4e}
+Acessa a instância única do \doxyref{EnhancedInputManager}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager}. 
+
+Referências \_\-instance e EnhancedInputManager().
+
+
+
+Referenciado por EnhancedInputManager() e postMultimodalEvent().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!gotoInputMode@{gotoInputMode}}
+\index{gotoInputMode@{gotoInputMode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{gotoInputMode}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::gotoInputMode (string {\em inputModeId})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a516c9e18cabe5b1daab04c5fd73d5eaa}
+Atvia um modo de entrada previamente adicionado. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em inputModeId}]Id do modo de entrada a ser ativado. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a09a9c5af4124bc571515e94f68b07256}.
+
+
+
+Referências currentInputMode, getInputMode(), inputModeIndex, inputModes e logger.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!hasCode@{hasCode}}
+\index{hasCode@{hasCode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{hasCode}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::hasCode (string {\em codeStr})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a2e66b0f723f9abb5f9589f56d1e21d75}
+Verifica se uma dada tecla existe no conjunto de teclas mapeadas. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em codeStr}]Identificador da tecla a ser chegada. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se a tecla existir; false caso contrário. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a1d998e5010e297c48ae13fc47c9c5234}.
+
+
+
+Referências codeMap.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!hasCode@{hasCode}}
+\index{hasCode@{hasCode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{hasCode}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::hasCode (int {\em code})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a41b5236e73086da4ad199087f00f7b5b}
+Verifica se uma dada tecla existe no conjunto de teclas mapeadas. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em code}]Código da tecla a ser chegada. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se a tecla existir; false caso contrário. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_ad60eb6cadce0c06f8b1ac07528635d0c}.
+
+
+
+Referências codeMap.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!initializeInputIntervalTime@{initializeInputIntervalTime}}
+\index{initializeInputIntervalTime@{initializeInputIntervalTime}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{initializeInputIntervalTime}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::initializeInputIntervalTime ()\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a19b7095d9f0684a37d04d39950483fb6}
+Lê do arquivo de configuração os intervalos de tempo mínimos para que dois eventos da mesma tecla sejam considerados. 
+
+Referências declarativeIntervalTime, imperativeIntervalTime e logger.
+
+
+
+Referenciado por EnhancedInputManager().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!nextInputMode@{nextInputMode}}
+\index{nextInputMode@{nextInputMode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{nextInputMode}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::nextInputMode ()\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ade89a1f7a566a6d8afaa68110476e7e8}
+Alterna para o próximo modo de entrada registrado, caso algum outro modo exista. 
+
+Referências currentInputMode, br::ufscar::lince::ginga::core::mmi::IInputMode::exitingInputMode(), inputModeIndex, inputModes, logger e br::ufscar::lince::ginga::core::mmi::IInputMode::startingInputMode().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!performMultimodalInputLockedActions@{performMultimodalInputLockedActions}}
+\index{performMultimodalInputLockedActions@{performMultimodalInputLockedActions}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{performMultimodalInputLockedActions}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::performMultimodalInputLockedActions ()\hspace{0.3cm}{\ttfamily  [protected, virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a333c7ee7dbe92aaa064fc04d06c05946}
+Atualiza o conjunto multimodalEventListeners com base na lista de ações de adição e remoção de listeners (actionsToMultimodalListeners). 
+
+Referências actionsToMultimodalListeners, actMultimodalMutex, lockedMultimodalListenerAction::isAdd, lockedMultimodalListenerAction::l, logger, multimodalEventListeners e running.
+
+
+
+Referenciado por addMultimodalInputEventListener(), dispatchMultimodalEvent() e removeMultimodalInputEventListener().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!postEvent@{postEvent}}
+\index{postEvent@{postEvent}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{postEvent}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::postEvent (int {\em keyCode})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a4c9d54eb3e386e6fa444b25272182f64}
+Permite a notificação a ocorrência de um evento. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em keyCode}]Tecla pressionada. \end{DoxyParams}
+
+
+Referências postEvent().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!postEvent@{postEvent}}
+\index{postEvent@{postEvent}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{postEvent}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::postEvent (IInputEvent $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ae9d739785faff39a808130d1c84a0293}
+Permite a notificação da ocorrência de um evento. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em event}]O evento ocorrido. \end{DoxyParams}
+
+
+Referências eventBuffer, logger e running.
+
+
+
+Referenciado por postEvent() e postMultimodalEvent().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!postMultimodalEvent@{postMultimodalEvent}}
+\index{postMultimodalEvent@{postMultimodalEvent}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{postMultimodalEvent}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::postMultimodalEvent (string {\em xml})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ac54fd185c441d02b9a925c366c4de866}
+Permite a notificação da ocorrência de um evento multimodal na forma de uma string contendo um xml. Essa função faz o parser do xml, monta um objeto de evento multimodal e chama o método void \doxyref{postMultimodalEvent(IMultimodalInputEvent$\ast$ multimodalInputEvent)}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a6e2e28a5aa71bef5d112ad03219caa40} 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em xml}]O evento multimodal ocorrido em formato xml. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a164d3b69f779481390962b44e2e30c3c}.
+
+
+
+Referências br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent::getId(), getInstance(), logger, br::ufscar::lince::ginga::core::mmi::EventParser::parse(), postEvent() e postMultimodalEvent().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!postMultimodalEvent@{postMultimodalEvent}}
+\index{postMultimodalEvent@{postMultimodalEvent}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{postMultimodalEvent}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::postMultimodalEvent ({\bf IMultimodalInputEvent} $\ast$ {\em multimodalInputEvent})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a6e2e28a5aa71bef5d112ad03219caa40}
+Permite a notificação a ocorrência de um evento multimodal. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em multimodalInputEvent}]O evento multimodal ocorrido. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a1b294030cfc45c78836c05488f95582a}.
+
+
+
+Referências logger e postEvent().
+
+
+
+Referenciado por postMultimodalEvent().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!release@{release}}
+\index{release@{release}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::release ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_aede072c9019d453a866ff8fca58b46f0}
+Esvazia as listas de listeners e deleta o buffer de eventos. 
+
+Referências actAppMutex, actInpMutex, actionsToAppListeners, actionsToInpListeners, actionsToMultimodalListeners, actMultimodalMutex, applicationListeners, appMutex, eventBuffer, eventListeners, logger, multimodalEventListeners, multimodalMutex, notifying, notifyingApp, notifyingMultimodal e running.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!removeApplicationInputEventListener@{removeApplicationInputEventListener}}
+\index{removeApplicationInputEventListener@{removeApplicationInputEventListener}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{removeApplicationInputEventListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::removeApplicationInputEventListener (IInputEventListener $\ast$ {\em listener})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_af27454e8d673137d51e9729fc02f65e2}
+Remove um observador de eventos de aplicação. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em listener}]O observador a ser removido. \end{DoxyParams}
+
+
+Referências actAppMutex, actionsToAppListeners, applicationListeners, appMutex, lockedListenerAction::events, lockedListenerAction::isAdd, lockedListenerAction::l, notifyingApp e running.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!removeCode@{removeCode}}
+\index{removeCode@{removeCode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{removeCode}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::removeCode (string {\em codeStr})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_afe3a5063ea99cb766543c4a2c1054ec2}
+Remove uma tecla do conjunto de teclas mapeadas. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em codeStr}]Identificador a ser removida. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se a tecla foi removida com sucesso; false caso contrário. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a4d29e5e24c0a0fefbae57dee15113c53}.
+
+
+
+Referências codeMap.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!removeCode@{removeCode}}
+\index{removeCode@{removeCode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{removeCode}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::removeCode (int {\em code})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a1d4a7473ddef29b2bd933293f8ed30b8}
+Remove uma tecla do conjunto de teclas mapeadas. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em code}]Código da tecla a ser removida. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se a tecla foi removida com sucesso; false caso contrário. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a7d16d1b63d954ebf7c29e75dd8ea60ec}.
+
+
+
+Referências codeMap.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!removeInputEventListener@{removeInputEventListener}}
+\index{removeInputEventListener@{removeInputEventListener}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{removeInputEventListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::removeInputEventListener (IInputEventListener $\ast$ {\em listener})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a2a18be127f2547ea1f29855618071ba6}
+Remove um observador de eventos. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em listener}]O observador a ser removido. \end{DoxyParams}
+
+
+Referências actInpMutex, actionsToInpListeners, eventListeners, lockedListenerAction::events, lockedListenerAction::isAdd, lockedListenerAction::l, notifying e running.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!removeInputMode@{removeInputMode}}
+\index{removeInputMode@{removeInputMode}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{removeInputMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IInputMode} $\ast$ br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::removeInputMode (string {\em inputModeId})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ac8344e0a6779dff8ff9113482b39581b}
+Remove um modo de entrada previamente adicionado. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em inputModeId}]Id do modo de entrada a ser removido. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O modo de entrada removido ou NULL caso o modo não seja encontrado. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+\item[{\em BadArgumentException}]inputModeName for o identificador do modo de entrada atual. \end{DoxyExceptions}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_ad4b902e0a85aa2d0fe3df51d6b56f040}.
+
+
+
+Referências currentInputMode, inputModeMap, inputModes e logger.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!removeMultimodalInputEventListener@{removeMultimodalInputEventListener}}
+\index{removeMultimodalInputEventListener@{removeMultimodalInputEventListener}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{removeMultimodalInputEventListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::removeMultimodalInputEventListener ({\bf IMultimodalInputEventListener} $\ast$ {\em listener})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_abb4a1319555959cc0d4eae7cd8ff2459}
+Remove um observador de eventos multimodais. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em listener}]O observador a ser removido. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a50eab137b503ba042f5e729c09433f71}.
+
+
+
+Referências actionsToMultimodalListeners, actMultimodalMutex, lockedMultimodalListenerAction::isAdd, lockedMultimodalListenerAction::l, logger, multimodalEventListeners, multimodalMutex, notifying, performMultimodalInputLockedActions() e running.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!setAxisBoundaries@{setAxisBoundaries}}
+\index{setAxisBoundaries@{setAxisBoundaries}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{setAxisBoundaries}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::setAxisBoundaries (int {\em x}, \/  int {\em y}, \/  int {\em z})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a75edd38eed4dc83b36b608ea52eaaa57}
+Seta as coordenadas que limitam a posição do ponteiro do mouse. Ou seja, as coordenadas do ponteiro do mouse nunca podem ser maiores do que as setadas por essa função. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em x}]O valor limite da coordenada x. \item[{\em y}]O valor limite da coordenada y. \item[{\em z}]O valor limite da coordenada z. \end{DoxyParams}
+
+
+Referências maxX e maxY.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!setAxisValues@{setAxisValues}}
+\index{setAxisValues@{setAxisValues}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{setAxisValues}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::setAxisValues (int {\em x}, \/  int {\em y}, \/  int {\em z})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a6d9cfbccac8ee28906ee60791ef25526}
+Seta as coordenadas do ponteiro do mouse. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em x}]O valor da coordenada x. \item[{\em y}]O valor da coordenada y. \item[{\em z}]O valor da coordenada z. \end{DoxyParams}
+
+
+Referências currentXAxis e currentYAxis.
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!waitForUnlockCondition@{waitForUnlockCondition}}
+\index{waitForUnlockCondition@{waitForUnlockCondition}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{waitForUnlockCondition}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::waitForUnlockCondition ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ab33e407205f97459c0ef0137b80d2eda}
+Para permitir que a main fique travada mesmo sem estar recebendo um fluxo de dados ou sem existir uma aplicação ncl rodando 
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IEnhancedInputManager_a3a04932e36833d64ba65ef352bfdf7f5}.
+
+
+
+\subsection{Atributos}
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!actionsToAppListeners@{actionsToAppListeners}}
+\index{actionsToAppListeners@{actionsToAppListeners}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{actionsToAppListeners}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf LockedAction}$\ast$$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::actionsToAppListeners}\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a72557a9309e83a7a6e8f3081aa807941}
+Conjunto de observadores de aplicações a serem acrescentados ou removidos em applicationListeners. 
+
+Referenciado por addApplicationInputEventListener(), EnhancedInputManager(), release() e removeApplicationInputEventListener().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!actionsToInpListeners@{actionsToInpListeners}}
+\index{actionsToInpListeners@{actionsToInpListeners}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{actionsToInpListeners}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf LockedAction}$\ast$$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::actionsToInpListeners}\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a17b9c06247ccfe46dd435824e1fa3714}
+Conjunto de observadores a serem acrescentados ou removidos em applicationListeners. 
+
+Referenciado por addInputEventListener(), EnhancedInputManager(), release() e removeInputEventListener().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!actionsToMultimodalListeners@{actionsToMultimodalListeners}}
+\index{actionsToMultimodalListeners@{actionsToMultimodalListeners}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{actionsToMultimodalListeners}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf LockedMultimodalAction}$\ast$$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::actionsToMultimodalListeners}\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_ac82e7bc4c4e326afa89c37b51755aac4}
+Conjunto de observadores a serem acrescentados ou removidos em multimodalEventListeners. 
+
+Referenciado por addMultimodalInputEventListener(), EnhancedInputManager(), performMultimodalInputLockedActions(), release() e removeMultimodalInputEventListener().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!eventListeners@{eventListeners}}
+\index{eventListeners@{eventListeners}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{eventListeners}]{\setlength{\rightskip}{0pt plus 5cm}map$<$IInputEventListener$\ast$, set$<$int$>$$\ast$$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::eventListeners}\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a3284bbee66a2a4d8d676e71b0c1c17bb}
+Armazena as instâncias que aguardam por eventos e o conjuntos dos eventos que são aguardados por estas instâncias. 
+
+Referenciado por addInputEventListener(), EnhancedInputManager(), release() e removeInputEventListener().
+
+\index{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}!notifyingMultimodal@{notifyingMultimodal}}
+\index{notifyingMultimodal@{notifyingMultimodal}!br::ufscar::lince::ginga::core::mmi::EnhancedInputManager@{br::ufscar::lince::ginga::core::mmi::EnhancedInputManager}}
+\subsubsection[{notifyingMultimodal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf br::ufscar::lince::ginga::core::mmi::EnhancedInputManager::notifyingMultimodal}\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1EnhancedInputManager_a6772b1b6baa2edc0373a6da748c2d2da}
+Inidica se o componente está no meio do processo de notificação de eventos de entrada para os observadores. 
+
+Referenciado por dispatchMultimodalEvent(), EnhancedInputManager() e release().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/EnhancedInputManager.h\item 
+src/{\bf EnhancedInputManager.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace}\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}}
+
+
+{\ttfamily \#include $<$Trace.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Trace} ()
+\item 
+void {\bf setTraceFormatRef} ({\bf TraceFormat} $\ast${\bf traceFormatRef})
+\item 
+void {\bf parseTraceData} (char $\ast$data, {\bf BoundingBox} $\ast$boundingBox)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf TraceFormat} $\ast$ {\bf traceFormatRef}
+\item 
+vector$<$ long $>$ $\ast$ {\bf vectX}
+\item 
+vector$<$ long $>$ $\ast$ {\bf vectY}
+\item 
+vector$<$ int $>$ $\ast$ {\bf vectF}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que representa um trace de um InkML. Mais informações em {\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}!Trace@{Trace}}
+\index{Trace@{Trace}!br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}}
+\subsubsection[{Trace}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::Trace ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace_abc01a59768ea5f24bb7eafb779b56139}
+Desc -\/ constructor.
+
+Desc -\/ constructor 
+
+Referências traceFormatRef, vectF, vectX e vectY.
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}!parseTraceData@{parseTraceData}}
+\index{parseTraceData@{parseTraceData}!br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}}
+\subsubsection[{parseTraceData}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::parseTraceData (char $\ast$ {\em data}, \/  {\bf BoundingBox} $\ast$ {\em boundingBox})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace_adf17d60b513b1aef583234205ecc8ffd}
+Desc -\/ function to parse traceData. It uses the setDataCoordinate method to process and store co-\/ordinate values. 
+
+Referências br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::getChannelAtIndex() e traceFormatRef.
+
+
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::insertTrace().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}!setTraceFormatRef@{setTraceFormatRef}}
+\index{setTraceFormatRef@{setTraceFormatRef}!br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}}
+\subsubsection[{setTraceFormatRef}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::setTraceFormatRef ({\bf TraceFormat} $\ast$ {\em traceFormatRef})\hspace{0.3cm}{\ttfamily  [inline]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace_a86a974cd4bdf8df5c2c764cba055d3cf}
+Desc -\/ assign traceFormat of this trace. 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::insertTrace().
+
+
+
+\subsection{Atributos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}!traceFormatRef@{traceFormatRef}}
+\index{traceFormatRef@{traceFormatRef}!br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}}
+\subsubsection[{traceFormatRef}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TraceFormat}$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::traceFormatRef}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace_a788feb85d559a31b53354a5b19ff09c6}
+Desc -\/ Reference to the associated \doxyref{TraceFormat}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1TraceFormat}. 
+
+Referenciado por parseTraceData() e Trace().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}!vectF@{vectF}}
+\index{vectF@{vectF}!br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}}
+\subsubsection[{vectF}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::vectF}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace_a717bfb26b8cc5d13cde200b1eee46dba}
+Desc -\/ To hold channel F data (i.e. Pressure/Force co-\/ordinate data). 
+
+Referenciado por Trace().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}!vectX@{vectX}}
+\index{vectX@{vectX}!br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}}
+\subsubsection[{vectX}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::vectX}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace_a86f550f28331c427cb0214826832f100}
+Desc -\/ To hold channel X data (i.e. X co-\/ordinate data). 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::normalizeTracePoint() e Trace().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}!vectY@{vectY}}
+\index{vectY@{vectY}!br::ufscar::lince::ginga::core::mmi::inkmllib::Trace@{br::ufscar::lince::ginga::core::mmi::inkmllib::Trace}}
+\subsubsection[{vectY}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::vectY}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace_a8d478fda07ddaa3c8297257fb6f0ea79}
+Desc -\/ To hold channel Y data (i.e. Y co-\/ordinate data). 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::normalizeTracePoint() e Trace().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/Trace.h\item 
+src/Trace.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink}\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+
+
+{\ttfamily \#include $<$Ink.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Ink} ()
+\item 
+void {\bf addDefinitions} ({\bf Definitions} $\ast$definitions)
+\item 
+{\bf Definitions} $\ast$ {\bf getDefinitions} ()
+\item 
+void {\bf addTrace} ({\bf Trace} trace)
+\item 
+void {\bf normalizeTracePoint} (long width, long height)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf BoundingBox} $\ast$ {\bf boundingBox}
+\item 
+vector$<$ {\bf Trace} $>$ $\ast$ {\bf vectTrace}
+\item 
+{\bf Context} $\ast$ {\bf currentContext}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que representa dados de tinta contidos em um \doxyref{MultimodalInputEvent}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent}. Mais informações em {\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}!Ink@{Ink}}
+\index{Ink@{Ink}!br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+\subsubsection[{Ink}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::Ink ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink_acf2c0778a54f2a2289f3e98f9b534abf}
+Desc -\/ constructor to create an ink document.
+
+Desc -\/ constructor to create an ink document 
+
+Referências boundingBox, currentContext, br::ufscar::lince::ginga::core::mmi::inkmllib::structBoundingBox::maxX, br::ufscar::lince::ginga::core::mmi::inkmllib::structBoundingBox::maxY, br::ufscar::lince::ginga::core::mmi::inkmllib::structBoundingBox::minX, br::ufscar::lince::ginga::core::mmi::inkmllib::structBoundingBox::minY e vectTrace.
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}!addDefinitions@{addDefinitions}}
+\index{addDefinitions@{addDefinitions}!br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+\subsubsection[{addDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::addDefinitions ({\bf Definitions} $\ast$ {\em definitions})\hspace{0.3cm}{\ttfamily  [inline]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink_aebf7a2d5ec65022b3c7a6e246abe30b1}
+Desc -\/ assign the definitions state of this ink document. 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parseDefinitions().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}!addTrace@{addTrace}}
+\index{addTrace@{addTrace}!br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+\subsubsection[{addTrace}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::addTrace ({\bf Trace} {\em trace})\hspace{0.3cm}{\ttfamily  [inline]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink_a9d464f7cd812b15df0425a428deb58e4}
+Desc -\/ function to add a \doxyref{Trace}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Trace} to this ink document. 
+
+Referências vectTrace.
+
+
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::insertTrace().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}!getDefinitions@{getDefinitions}}
+\index{getDefinitions@{getDefinitions}!br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+\subsubsection[{getDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Definitions}$\ast$ br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::getDefinitions ()\hspace{0.3cm}{\ttfamily  [inline]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink_acc9fb230c94feb184ebb6ff120726ea2}
+Desc -\/ function to get the definitions state of this ink document. 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parse().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}!normalizeTracePoint@{normalizeTracePoint}}
+\index{normalizeTracePoint@{normalizeTracePoint}!br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+\subsubsection[{normalizeTracePoint}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::normalizeTracePoint (long {\em width}, \/  long {\em height})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink_ab7d9d0182e3ce2602a958f266273f8fd}
+Desc -\/ function to normalize trace sample point data to fit within the given boundary box for rendering.
+
+Desc -\/ function to normalize trace sample point data to fit within the given boundary box for rendering 
+
+Referências boundingBox, br::ufscar::lince::ginga::core::mmi::inkmllib::structBoundingBox::maxX, br::ufscar::lince::ginga::core::mmi::inkmllib::structBoundingBox::maxY, br::ufscar::lince::ginga::core::mmi::inkmllib::structBoundingBox::minX, br::ufscar::lince::ginga::core::mmi::inkmllib::structBoundingBox::minY, vectTrace, br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::vectX e br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::vectY.
+
+
+
+\subsection{Atributos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}!boundingBox@{boundingBox}}
+\index{boundingBox@{boundingBox}!br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+\subsubsection[{boundingBox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BoundingBox}$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::boundingBox}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink_a67eedef5886f62fc837fa5d95abefa47}
+Desc -\/ To capture the boundary of the rectangle inside whice the traces of this ink document would be rendered. 
+
+Referenciado por Ink(), br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::insertTrace() e normalizeTracePoint().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}!currentContext@{currentContext}}
+\index{currentContext@{currentContext}!br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+\subsubsection[{currentContext}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Context}$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::currentContext}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink_a0a895588d2230e46136d6e71ecf1b44f}
+Desc -\/ handle to the current context of this ink document. 
+
+Referenciado por Ink(), br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::insertTrace() e br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parse().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}!vectTrace@{vectTrace}}
+\index{vectTrace@{vectTrace}!br::ufscar::lince::ginga::core::mmi::inkmllib::Ink@{br::ufscar::lince::ginga::core::mmi::inkmllib::Ink}}
+\subsubsection[{vectTrace}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Trace}$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::vectTrace}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink_af71e6d4b35ae20c422b733b3e8df3ea1}
+Desc -\/ To hold all traces of this ink document. 
+
+Referenciado por addTrace(), Ink() e normalizeTracePoint().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/Ink.h\item 
+src/Ink.cpp\end{DoxyCompactItemize}

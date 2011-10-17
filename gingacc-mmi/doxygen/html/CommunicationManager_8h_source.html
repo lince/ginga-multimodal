@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Ginga-CC - Componente de Interação Multimodal: Código-Fonte de include/CommunicationManager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+<h1>include/CommunicationManager.h</h1><a href="CommunicationManager_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/******************************************************************************</span>
+<a name="l00002"></a>00002 <span class="comment">Este arquivo eh parte da implementacao do ambiente declarativo do middleware</span>
+<a name="l00003"></a>00003 <span class="comment">Ginga (Ginga-NCL).</span>
+<a name="l00004"></a>00004 <span class="comment"></span>
+<a name="l00005"></a>00005 <span class="comment">Copyright (C) 2009 UFSCar/Lince, Todos os Direitos Reservados.</span>
+<a name="l00006"></a>00006 <span class="comment"></span>
+<a name="l00007"></a>00007 <span class="comment">Este programa eh software livre; voce pode redistribui-lo e/ou modificah-lo sob</span>
+<a name="l00008"></a>00008 <span class="comment">os termos da Licenca Publica Geral GNU versao 2 conforme publicada pela Free</span>
+<a name="l00009"></a>00009 <span class="comment">Software Foundation.</span>
+<a name="l00010"></a>00010 <span class="comment"></span>
+<a name="l00011"></a>00011 <span class="comment">Este programa eh distribuido na expectativa de que seja util, porem, SEM</span>
+<a name="l00012"></a>00012 <span class="comment">NENHUMA GARANTIA; nem mesmo a garantia implicita de COMERCIABILIDADE OU</span>
+<a name="l00013"></a>00013 <span class="comment">ADEQUACAO A UMA FINALIDADE ESPECIFICA. Consulte a Licenca Publica Geral do</span>
+<a name="l00014"></a>00014 <span class="comment">GNU versao 2 para mais detalhes.</span>
+<a name="l00015"></a>00015 <span class="comment"></span>
+<a name="l00016"></a>00016 <span class="comment">Voce deve ter recebido uma copia da Licenca Publica Geral do GNU versao 2 junto</span>
+<a name="l00017"></a>00017 <span class="comment">com este programa; se nao, escreva para a Free Software Foundation, Inc., no</span>
+<a name="l00018"></a>00018 <span class="comment">endereco 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.</span>
+<a name="l00019"></a>00019 <span class="comment"></span>
+<a name="l00020"></a>00020 <span class="comment">Para maiores informacoes:</span>
+<a name="l00021"></a>00021 <span class="comment">lince@dc.ufscar.br</span>
+<a name="l00022"></a>00022 <span class="comment">mgp@icmc.usp.br</span>
+<a name="l00023"></a>00023 <span class="comment">http://www.ncl.org.br</span>
+<a name="l00024"></a>00024 <span class="comment">http://www.ginga.org.br</span>
+<a name="l00025"></a>00025 <span class="comment">http://lince.dc.ufscar.br</span>
+<a name="l00026"></a>00026 <span class="comment">http://www.icmc.usp.br/php/laboratorio.php?origem=icmc&amp;id_lab=3&amp;nat=icmc</span>
+<a name="l00027"></a>00027 <span class="comment">******************************************************************************</span>
+<a name="l00028"></a>00028 <span class="comment">This file is part of the declarative environment of middleware Ginga (Ginga-NCL)</span>
+<a name="l00029"></a>00029 <span class="comment"></span>
+<a name="l00030"></a>00030 <span class="comment">Copyright (C) 2009 UFSCar/Lince, Todos os Direitos Reservados.</span>
+<a name="l00031"></a>00031 <span class="comment"></span>
+<a name="l00032"></a>00032 <span class="comment">This program is free software; you can redistribute it and/or modify it under</span>
+<a name="l00033"></a>00033 <span class="comment">the terms of the GNU General Public License version 2 as published by</span>
+<a name="l00034"></a>00034 <span class="comment">the Free Software Foundation.</span>
+<a name="l00035"></a>00035 <span class="comment"></span>
+<a name="l00036"></a>00036 <span class="comment">This program is distributed in the hope that it will be useful, but WITHOUT ANY</span>
+<a name="l00037"></a>00037 <span class="comment">WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A</span>
+<a name="l00038"></a>00038 <span class="comment">PARTICULAR PURPOSE.  See the GNU General Public License version 2 for more</span>
+<a name="l00039"></a>00039 <span class="comment">details.</span>
+<a name="l00040"></a>00040 <span class="comment"></span>
+<a name="l00041"></a>00041 <span class="comment">You should have received a copy of the GNU General Public License version 2</span>
+<a name="l00042"></a>00042 <span class="comment">along with this program; if not, write to the Free Software</span>
+<a name="l00043"></a>00043 <span class="comment">Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</span>
+<a name="l00044"></a>00044 <span class="comment"></span>
+<a name="l00045"></a>00045 <span class="comment">For further information contact:</span>
+<a name="l00046"></a>00046 <span class="comment">lince@dc.ufscar.br</span>
+<a name="l00047"></a>00047 <span class="comment">mgp@icmc.usp.br</span>
+<a name="l00048"></a>00048 <span class="comment">http://www.ncl.org.br</span>
+<a name="l00049"></a>00049 <span class="comment">http://www.ginga.org.br</span>
+<a name="l00050"></a>00050 <span class="comment">http://lince.dc.ufscar.br</span>
+<a name="l00051"></a>00051 <span class="comment">*******************************************************************************/</span>
+<a name="l00052"></a>00052 
+<a name="l00059"></a>00059 <span class="preprocessor">#ifndef COMMUNICATIONMANAGER_H</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span><span class="preprocessor">#define COMMUNICATIONMANAGER_H</span>
+<a name="l00061"></a>00061 <span class="preprocessor"></span>
+<a name="l00062"></a>00062 <span class="preprocessor">#include &lt;ginga/system/thread/Thread.h&gt;</span>
+<a name="l00063"></a>00063 <span class="keyword">using namespace </span>::br::pucrio::telemidia::ginga::core::system::thread;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="preprocessor">#include &lt;ginga/linceutil/LoggerUtil.h&gt;</span>
+<a name="l00066"></a>00066 <span class="keyword">using namespace </span>br::ufscar::lince::util;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="preprocessor">#include &lt;avahi-client/client.h&gt;</span>
+<a name="l00069"></a>00069 <span class="preprocessor">#include &lt;avahi-client/publish.h&gt;</span>
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#include &lt;avahi-common/alternative.h&gt;</span>
+<a name="l00072"></a>00072 <span class="preprocessor">#include &lt;avahi-common/simple-watch.h&gt;</span>
+<a name="l00073"></a>00073 <span class="preprocessor">#include &lt;avahi-common/malloc.h&gt;</span>
+<a name="l00074"></a>00074 <span class="preprocessor">#include &lt;avahi-common/error.h&gt;</span>
+<a name="l00075"></a>00075 <span class="preprocessor">#include &lt;avahi-common/timeval.h&gt;</span>
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 <span class="keyword">namespace </span>br{
+<a name="l00078"></a>00078 <span class="keyword">namespace </span>ufscar{
+<a name="l00079"></a>00079 <span class="keyword">namespace </span>lince{
+<a name="l00080"></a>00080 <span class="keyword">namespace </span>ginga{
+<a name="l00081"></a>00081 <span class="keyword">namespace </span>core{
+<a name="l00082"></a>00082 <span class="keyword">namespace </span>mmi{
+<a name="l00083"></a>00083 
+<a name="l00088"></a><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html">00088</a> <span class="keyword">class </span><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html">CommunicationManager</a> : <span class="keyword">public</span> Thread {
+<a name="l00089"></a>00089         
+<a name="l00090"></a>00090         <span class="keyword">protected</span>:
+<a name="l00092"></a><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#ade2e5aba06f7e9ff9f20a3dcbd866637">00092</a>                 <span class="keyword">static</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html">CommunicationManager</a>* <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#ade2e5aba06f7e9ff9f20a3dcbd866637" title="Instância única.">_instance</a>;
+<a name="l00093"></a>00093 
+<a name="l00095"></a><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#a952672bf881e13f372e41148b02b9f5f">00095</a>                 HLoggerPtr <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#a952672bf881e13f372e41148b02b9f5f" title="Responsável pelo controle das mensagens de log.">logger</a>;
+<a name="l00096"></a>00096 
+<a name="l00098"></a><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#a813216a3ce2971eae7c77e8fbcd7ae02">00098</a>                 AvahiEntryGroup *<a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#a813216a3ce2971eae7c77e8fbcd7ae02" title="TODO Comentar.">group</a>;
+<a name="l00099"></a>00099 
+<a name="l00101"></a><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#ad645be9ab5ca7430507654dcbd71a42a">00101</a>                 AvahiSimplePoll *<a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#ad645be9ab5ca7430507654dcbd71a42a" title="TODO Comentar.">simplePoll</a>;
+<a name="l00102"></a>00102 
+<a name="l00104"></a><a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#abdd4ad0420a818b71c830edb5a44e414">00104</a>                 <span class="keywordtype">char</span> *<a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#abdd4ad0420a818b71c830edb5a44e414" title="TODO Comentar.">name</a>;
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106         <span class="keyword">protected</span>:
+<a name="l00110"></a>00110                 <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#af3ae2de8df5933c90b2364e8de223527">CommunicationManager</a>();
+<a name="l00111"></a>00111 
+<a name="l00115"></a>00115                 <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#a749f9775e5163857f83051c5f56ec354">~CommunicationManager</a>();
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117         <span class="keyword">public</span>:
+<a name="l00121"></a>00121                 <span class="keyword">static</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html">CommunicationManager</a>* <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#a9a1c18a3535d26de65101a1f8fa5e9ae">getInstance</a>();
+<a name="l00122"></a>00122 
+<a name="l00128"></a>00128                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#affb75a8c8d415fb8f6617411610eb4ec">run</a>();
+<a name="l00129"></a>00129 
+<a name="l00134"></a>00134                 <span class="keywordtype">int</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#a902541dc224243b9ba7122d2713992c2">startSocket</a>();
+<a name="l00135"></a>00135 
+<a name="l00139"></a>00139                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#aea092133e1ac592ad8e8d32ccf5747c9">clientCallback</a>(AvahiClient* c, AvahiClientState state,
+<a name="l00140"></a>00140                                 AVAHI_GCC_UNUSED <span class="keywordtype">void</span>* userdata);
+<a name="l00141"></a>00141 
+<a name="l00145"></a>00145                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#af065ad8bdca24f13fe958b717700eefb">entryGroupCallback</a>(AvahiEntryGroup* g,
+<a name="l00146"></a>00146                                 AvahiEntryGroupState state, AVAHI_GCC_UNUSED <span class="keywordtype">void</span>* userdata);
+<a name="l00147"></a>00147 
+<a name="l00154"></a>00154                 <span class="keywordtype">void</span> <a class="code" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager.html#a9aad800cf83e694e92d5a1c360f17923">createServices</a>(AvahiClient* c);
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156 };
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158 }
+<a name="l00159"></a>00159 }
+<a name="l00160"></a>00160 }
+<a name="l00161"></a>00161 }
+<a name="l00162"></a>00162 }
+<a name="l00163"></a>00163 }
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165 <span class="preprocessor">#endif </span><span class="comment">/*COMMUNICATIONMANAGER_H*/</span>
+</pre></div></div>
+<hr class="footer"/><address style="text-align: right;"><small>Gerado em Wed Nov 17 16:30:21 2010 para Ginga-CC - Componente de Interação Multimodal por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

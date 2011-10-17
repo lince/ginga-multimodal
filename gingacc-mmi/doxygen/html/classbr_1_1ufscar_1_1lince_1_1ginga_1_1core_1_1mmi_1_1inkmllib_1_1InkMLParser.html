@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Ginga-CC - Componente de Interação Multimodal: Referência da Classe br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.6.3 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;Componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;Classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><b>br</b>::<b>ufscar</b>::<b>lince</b>::<b>ginga</b>::<b>core</b>::<b>mmi</b>::<b>inkmllib</b>::<a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser.html">InkMLParser</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Referência da Classe br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser</h1><!-- doxytag: class="br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser" -->
+<p><code>#include &lt;<a class="el" href="InkMLParser_8h_source.html">InkMLParser.h</a>&gt;</code></p>
+
+<p><a href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser-members.html">Lista de todos os Membros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos Públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser.html#a2dffb7a2c98bd50a035184d2d660300a">InkMLParser</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser.html#a2bd9e0ac70c5b4445c906564173f7f17">parse</a> (DOMElement *inkMLData, InkMLError *retCode)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser.html#ac307a577bc21734a4e4eb76c59267524">insertTrace</a> (DOMElement *child, <a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> *objInk)</td></tr>
+<tr><td colspan="2"><h2>Métodos Protegidos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser.html#abcca6b78214275053d86084d66077018">parseDefinitions</a> (DOMElement *e, <a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> *objInk)</td></tr>
+<tr><td colspan="2"><h2>Atributos Protegidos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9804b5bea7dd3305c8b1f157e86dffdd"></a><!-- doxytag: member="br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::logger" ref="a9804b5bea7dd3305c8b1f157e86dffdd" args="" -->
+HLoggerPtr&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1InkMLParser.html#a9804b5bea7dd3305c8b1f157e86dffdd">logger</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Responsável pelo controle das mensagens de log. <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição Detalhada</h2>
+<p>Classe responsável por realizar o parser de um InkML, utilizando a biblioteca xerces. Mais informações em <a href="http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib">http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib</a> </p>
+<hr/><h2>Construtores &amp; Destrutores</h2>
+<a class="anchor" id="a2dffb7a2c98bd50a035184d2d660300a"></a><!-- doxytag: member="br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::InkMLParser" ref="a2dffb7a2c98bd50a035184d2d660300a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::InkMLParser </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Construtor da classe InKMLParser. </p>
+
+<p>Referências <a class="el" href="InkMLParser_8h_source.html#l00123">logger</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Métodos</h2>
+<a class="anchor" id="ac307a577bc21734a4e4eb76c59267524"></a><!-- doxytag: member="br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::insertTrace" ref="ac307a577bc21734a4e4eb76c59267524" args="(DOMElement *child, Ink *objInk)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::insertTrace </td>
+          <td>(</td>
+          <td class="paramtype">DOMElement *&nbsp;</td>
+          <td class="paramname"> <em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> *&nbsp;</td>
+          <td class="paramname"> <em>objInk</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Faz o parser de uma tag "trace" e acrescenta os dados no objeto da Classe <a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> recebido.</p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>child</em>&nbsp;</td><td>DOMElement a ser parseado </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>objInk</em>&nbsp;</td><td>Instância de <a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> que receberá os dados parseados </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Referências <a class="el" href="Ink_8h_source.html#l00156">br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::addTrace()</a>, <a class="el" href="Ink_8h_source.html#l00122">br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::boundingBox</a>, <a class="el" href="Ink_8h_source.html#l00130">br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::currentContext</a>, <a class="el" href="InkMLParser_8h_source.html#l00123">logger</a>, <a class="el" href="Trace_8cpp_source.html#l00120">br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::parseTraceData()</a>, <a class="el" href="Trace_8h_source.html#l00150">br::ufscar::lince::ginga::core::mmi::inkmllib::Trace::setTraceFormatRef()</a> e <a class="el" href="Context_8h_source.html#l00104">br::ufscar::lince::ginga::core::mmi::inkmllib::Context::traceFormatRef</a>.</p>
+
+<p>Referenciado por <a class="el" href="InkMLParser_8cpp_source.html#l00117">parse()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2bd9e0ac70c5b4445c906564173f7f17"></a><!-- doxytag: member="br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parse" ref="a2bd9e0ac70c5b4445c906564173f7f17" args="(DOMElement *inkMLData, InkMLError *retCode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> * br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parse </td>
+          <td>(</td>
+          <td class="paramtype">DOMElement *&nbsp;</td>
+          <td class="paramname"> <em>inkMLData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InkMLError *&nbsp;</td>
+          <td class="paramname"> <em>retCode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Faz o parser de uma tag "ink" e retorna um objeto da Classe <a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a>.</p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>inkMLData</em>&nbsp;</td><td>DOMElement a ser parseado </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>retCode</em>&nbsp;</td><td>Código de erro, caso ocorra, ou NoError em caso de sucesso </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Referências <a class="el" href="Utility_8cpp_source.html#l00108">br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction::checkAndRemoveHash()</a>, <a class="el" href="Ink_8h_source.html#l00130">br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::currentContext</a>, <a class="el" href="Ink_8h_source.html#l00148">br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::getDefinitions()</a>, <a class="el" href="InkMLParser_8cpp_source.html#l00277">insertTrace()</a>, <a class="el" href="InkMLParser_8h_source.html#l00123">logger</a>, <a class="el" href="InkMLParser_8cpp_source.html#l00212">parseDefinitions()</a> e <a class="el" href="Context_8h_source.html#l00104">br::ufscar::lince::ginga::core::mmi::inkmllib::Context::traceFormatRef</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abcca6b78214275053d86084d66077018"></a><!-- doxytag: member="br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parseDefinitions" ref="abcca6b78214275053d86084d66077018" args="(DOMElement *e, Ink *objInk)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parseDefinitions </td>
+          <td>(</td>
+          <td class="paramtype">DOMElement *&nbsp;</td>
+          <td class="paramname"> <em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> *&nbsp;</td>
+          <td class="paramname"> <em>objInk</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Faz o parser de uma tag "definitions" e acrescenta os dados no objeto da Classe <a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> recebido.</p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>e</em>&nbsp;</td><td>DOMElement a ser parseado </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>objInk</em>&nbsp;</td><td>Instância de <a class="el" href="classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1Ink.html">Ink</a> que receberá os dados parseados </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Referências <a class="el" href="Ink_8h_source.html#l00140">br::ufscar::lince::ginga::core::mmi::inkmllib::Ink::addDefinitions()</a>, <a class="el" href="Definitions_8h_source.html#l00133">br::ufscar::lince::ginga::core::mmi::inkmllib::Definitions::addInkSource()</a>, <a class="el" href="Definitions_8h_source.html#l00124">br::ufscar::lince::ginga::core::mmi::inkmllib::Definitions::addTraceFormat()</a>, <a class="el" href="TraceFormat_8h_source.html#l00119">br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::id</a> e <a class="el" href="InkMLParser_8h_source.html#l00123">logger</a>.</p>
+
+<p>Referenciado por <a class="el" href="InkMLParser_8cpp_source.html#l00117">parse()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="InkMLParser_8h_source.html">InkMLParser.h</a></li>
+<li>src/InkMLParser.cpp</li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Gerado em Wed Nov 17 16:30:21 2010 para Ginga-CC - Componente de Interação Multimodal por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

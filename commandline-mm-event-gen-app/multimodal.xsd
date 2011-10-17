@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://agua.intermidia.icmc.usp.br/intermidia"
+		xmlns="http://agua.intermidia.icmc.usp.br/intermidia"
+		xmlns:inkml="http://www.w3.org/2003/InkML"
+		elementFormDefault="qualified">
+
+<!--<xs:import namespace="inkml" schemaLocation="inkml.xsd"/>-->
+<xs:import namespace="http://www.w3.org/2003/InkML" schemaLocation="inkml.xsd"/>
+
+<xs:element name="multimodal">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="head" minOccurs="0"/>
+			<xs:element ref="body" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+</xs:element>
+	
+<xs:element name="head">
+	<xs:complexType>
+		<xs:all>
+			<xs:element ref="device" minOccurs="0"/>
+			<xs:element ref="user" minOccurs="0"/>
+			<xs:element ref="timestamp" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="device">
+	<xs:complexType> <!-- Como obrigar a colocar pelo menos um dos dois atributos? -->
+		<xs:attribute name="id" type="uuid"/>
+		<xs:attribute name="model" type="xs:string"/>
+	</xs:complexType>
+</xs:element>
+	
+<xs:element name="user">
+	<xs:complexType>
+		<xs:attribute name="id" type="uuid" use="required"/>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="timestamp">
+	<xs:complexType> <!-- Como obrigar a colocar pelo menos um dos dois atributos? Devemos obrigar o uso de um quando o outro for colocado? -->
+		<xs:attribute name="begin" type="xs:dateTime"/>
+		<xs:attribute name="end" type="xs:dateTime"/>
+	</xs:complexType>
+</xs:element>
+
+
+<xs:element name="body">
+	<xs:complexType>
+		<xs:sequence> <!-- Não temos opção de deixar em qualquer ordem e com qualquer quantidade de ocorrências. As opções são all, sequence e choice -->
+			<xs:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="text" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="inkml:ink" minOccurs="0"/>
+			<xs:element ref="accel" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="voice" minOccurs="0"/>
+			<xs:element ref="binary" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="value">
+	<xs:complexType>
+		<xs:simpleContent>
+			<xs:extension base="xs:base64Binary">
+				<xs:attribute name="id" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="text" type="xs:string"/>
+
+<!-- TODO Acrescentar restrições para que os valores sejam inteiros -->
+<xs:element name="accel">
+	<xs:complexType>
+		<xs:attribute name="xValue" type="xs:string"/>
+		<xs:attribute name="yValue" type="xs:string"/>
+		<xs:attribute name="zValue" type="xs:string"/>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="voice" type="xs:string"/>
+
+<xs:element name="binary">
+	<xs:complexType>
+		<xs:simpleContent>
+			<xs:extension base="xs:base64Binary">
+				<xs:attribute name="filename" type="xs:string"/>
+				<xs:attribute name="mimetype" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+
+<xs:simpleType name="uuid">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="[a-zA-Z0-9]{8}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{12}"/>
+	</xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

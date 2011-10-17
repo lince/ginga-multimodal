@@ -1,0 +1,49 @@
+\section{Referência do Arquivo include/IEnhancedInputManager.h}
+\label{IEnhancedInputManager_8h}\index{include/IEnhancedInputManager.h@{include/IEnhancedInputManager.h}}
+{\ttfamily \#include $<$ginga/system/io/IInputManager.h$>$}\par
+{\ttfamily \#include \char`\"{}IInputMode.h\char`\"{}}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include \char`\"{}TraceFormat.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}InkSource.h\char`\"{}}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$ctype.h$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include \char`\"{}IMultimodalInputEvent.h\char`\"{}}\par
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager}
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef ::{\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} $\ast$ {\bf EnhancedInputManagerCreator} ()
+\item 
+typedef void {\bf EnhancedInputManagerDestroyer} (::{\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} $\ast$eim)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\begin{DoxyAuthor}{Autor}
+Caio Viel 
+
+Diogo de Carvalho Pedrosa 
+
+José Augusto Costa Martins Júnior 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+29-\/01-\/10 
+\end{DoxyDate}
+
+
+\subsection{Definições dos tipos}
+\index{IEnhancedInputManager.h@{IEnhancedInputManager.h}!EnhancedInputManagerCreator@{EnhancedInputManagerCreator}}
+\index{EnhancedInputManagerCreator@{EnhancedInputManagerCreator}!IEnhancedInputManager.h@{IEnhancedInputManager.h}}
+\subsubsection[{EnhancedInputManagerCreator}]{\setlength{\rightskip}{0pt plus 5cm}typedef ::{\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager}$\ast$ {\bf EnhancedInputManagerCreator}()}\label{IEnhancedInputManager_8h_a0ca98f80db9a7888596b43273cddafc8}
+Função que permite a criação de uma instância de IEnhancedInputManager. \index{IEnhancedInputManager.h@{IEnhancedInputManager.h}!EnhancedInputManagerDestroyer@{EnhancedInputManagerDestroyer}}
+\index{EnhancedInputManagerDestroyer@{EnhancedInputManagerDestroyer}!IEnhancedInputManager.h@{IEnhancedInputManager.h}}
+\subsubsection[{EnhancedInputManagerDestroyer}]{\setlength{\rightskip}{0pt plus 5cm}typedef void {\bf EnhancedInputManagerDestroyer}(::{\bf br::ufscar::lince::ginga::core::mmi::IEnhancedInputManager} $\ast$eim)}\label{IEnhancedInputManager_8h_a52a38821641cfd48eb9df9083b522ba6}
+Função que permite a destruição de uma instância de IEnhancedInputManager. 

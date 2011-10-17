@@ -1,0 +1,49 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1GlobalFunction}\index{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}}
+
+
+{\ttfamily \#include $<$Utility.h$>$}
+
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ {\bf checkAndRemoveHash} (char $\ast$str)
+\item 
+static char $\ast$ {\bf removeVelocity} (char $\ast$str)
+\item 
+static char $\ast$ {\bf decodeError} (InkMLError errorNo)
+\item 
+static char $\ast$ {\bf toLower} (char $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que possui métodos úteis para a realização do parser de um InkML. Mais informações em {\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}!checkAndRemoveHash@{checkAndRemoveHash}}
+\index{checkAndRemoveHash@{checkAndRemoveHash}!br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}}
+\subsubsection[{checkAndRemoveHash}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction::checkAndRemoveHash (char $\ast$ {\em str})\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1GlobalFunction_a5620a996e81c75c99178e3eff4862fba}
+Desc -\/ function to remove the '\#' character in the reference attribute URI 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::InkMLParser::parse().
+
+\index{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}!decodeError@{decodeError}}
+\index{decodeError@{decodeError}!br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}}
+\subsubsection[{decodeError}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction::decodeError (InkMLError {\em errorNo})\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1GlobalFunction_adc10afb654c4ae733b77b6aa672faf62}
+Desc -\/ method takes the enum of the Error message constants and provide string message \index{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}!removeVelocity@{removeVelocity}}
+\index{removeVelocity@{removeVelocity}!br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}}
+\subsubsection[{removeVelocity}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction::removeVelocity (char $\ast$ {\em str})\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1GlobalFunction_a33dcee0d0375d1b708cb4ca89d010b73}
+Desc -\/ method remove the given prefix $<$'$>$ to indicate the single difference and provide the string value of the co-\/ordinate differece data ex: if '12 is given, it returns 12 as string. \index{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}!toLower@{toLower}}
+\index{toLower@{toLower}!br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction@{br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction}}
+\subsubsection[{toLower}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ br::ufscar::lince::ginga::core::mmi::inkmllib::GlobalFunction::toLower (char $\ast$ {\em s})\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1inkmllib_1_1GlobalFunction_a2b1b6bff50fc4f53746650dd42cf2f45}
+Desc -\/ function to convert the given string to all lowercase characters 
+
+Referenciado por br::ufscar::lince::ginga::core::mmi::inkmllib::TraceFormat::addChannelOrder().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/Utility.h\item 
+src/Utility.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,298 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent}\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+
+
+{\ttfamily \#include $<$MultimodalInputEvent.h$>$}
+
+Diagrama de Hierarquia para br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent}
+\end{center}
+\end{figure}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf MultimodalInputEvent} (string {\bf id})
+\item 
+{\bf $\sim$MultimodalInputEvent} ()
+\item 
+virtual string {\bf getId} ()
+\item 
+virtual void {\bf setId} (string {\bf id})
+\item 
+void {\bf addValue} (string name, void $\ast$value)
+\item 
+bool {\bf removeValue} (string name)
+\item 
+map$<$ string, void $\ast$ $>$ $\ast$ {\bf getMultimodalValuesMap} ()
+\item 
+void {\bf setMultimodalValuesMap} (map$<$ string, void $\ast$ $>$ $\ast$map)
+\item 
+virtual vector$<$ string $>$ $\ast$ {\bf getStrings} ()
+\item 
+virtual void {\bf addString} (string str)
+\item 
+virtual Ink $\ast$ {\bf getInk} ()
+\item 
+virtual void {\bf setInk} (Ink $\ast${\bf ink})
+\item 
+virtual {\bf Acceleration} $\ast$ {\bf getAcceleration} ()
+\item 
+virtual void {\bf setAcceleration} ({\bf Acceleration} $\ast${\bf accel})
+\item 
+virtual vector$<$ {\bf File} $\ast$ $>$ $\ast$ {\bf getBinaries} ()
+\item 
+virtual void {\bf addFile} ({\bf File} $\ast$f)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+string {\bf id}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_adfe23d6dafe874c4d0f98a4d2cd0e604}
+
+\begin{DoxyCompactList}\small\item\em Variável para definição do id do evento ocorrido. \item\end{DoxyCompactList}\item 
+map$<$ string, void $\ast$ $>$ $\ast$ {\bf multimodalValuesMap}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a6f781b8c4443cfa943639e74544c50ed}
+
+\begin{DoxyCompactList}\small\item\em Objeto que contém um mapa de chaves e valores. \item\end{DoxyCompactList}\item 
+vector$<$ string $>$ $\ast$ {\bf strings}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a6dbb0687a3ed96df39d9de44345c79d0}
+
+\begin{DoxyCompactList}\small\item\em Vetor de strings. \item\end{DoxyCompactList}\item 
+Ink $\ast$ {\bf ink}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_aa870673b4559bba8e61955427d2c7fd9}
+
+\begin{DoxyCompactList}\small\item\em Ponteiro par um objeto que guarda os dados de tinta. \item\end{DoxyCompactList}\item 
+{\bf Acceleration} $\ast$ {\bf accel}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a2b1be3fdbd0e29ea55150df0e37eebdc}
+
+\begin{DoxyCompactList}\small\item\em Ponteiro par um objeto que guarda os dados de acelerômetro. \item\end{DoxyCompactList}\item 
+vector$<$ {\bf File} $\ast$ $>$ $\ast$ {\bf binaries}
+\begin{DoxyCompactList}\small\item\em Ponteiro par um objeto que guarda os dados de voz. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que representa um evento multimodal. 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!MultimodalInputEvent@{MultimodalInputEvent}}
+\index{MultimodalInputEvent@{MultimodalInputEvent}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{MultimodalInputEvent}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::MultimodalInputEvent (string {\em id})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a279fcc7e312c35c7ed745e5026690e07}
+Cria um evento do tipo multimodal apenas definindo seu id 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em id}]do evento \end{DoxyParams}
+
+
+Referências binaries, multimodalValuesMap e strings.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!$\sim$MultimodalInputEvent@{$\sim$MultimodalInputEvent}}
+\index{$\sim$MultimodalInputEvent@{$\sim$MultimodalInputEvent}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{$\sim$MultimodalInputEvent}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::$\sim$MultimodalInputEvent ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_aa0263c1887c689f1cae4bf41b2482ede}
+Destrói o objeto do evento multimodal 
+
+Referências binaries, multimodalValuesMap e strings.
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!addFile@{addFile}}
+\index{addFile@{addFile}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{addFile}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::addFile ({\bf File} $\ast$ {\em f})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_ab4d9eb64514f673c9092b4d70fc2bef8}
+Adiciona um arquivo ao evento multimodal. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em f}]Arquivo a ser adicionad no evento. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a2202acece2c5b201899ef73a374cb53e}.
+
+
+
+Referências binaries.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!addString@{addString}}
+\index{addString@{addString}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{addString}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::addString (string {\em str})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_af375eab32140b0faa2f860feee4c5870}
+Adiciona uma string ao evento multimodal. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em str}]String a ser adicionada no evento. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a17f4a388d7854789b10d68615b098d56}.
+
+
+
+Referências strings.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!addValue@{addValue}}
+\index{addValue@{addValue}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{addValue}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::addValue (string {\em name}, \/  void $\ast$ {\em value})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a35451b8fa11bb048860f738268bfdf1c}
+Adiciona novos valores ao evento multimodal 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em name}]Nome do valor \item[{\em value}]O valor \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_ad10863e1dbfe978e89729ad629edb815}.
+
+
+
+Referências multimodalValuesMap.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!getAcceleration@{getAcceleration}}
+\index{getAcceleration@{getAcceleration}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{getAcceleration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Acceleration} $\ast$ br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::getAcceleration ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_ada47dfbfd8048f03f96c336ef4f9ec75}
+Acessa o objeto acceleration do evento multimodal. \begin{DoxyReturn}{Retorna}
+objeto \doxyref{Acceleration}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1Acceleration} com os dados de aceleração do evento. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a9ed35bcbcbb3cbb20b050d5665d9ff35}.
+
+
+
+Referências accel.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!getBinaries@{getBinaries}}
+\index{getBinaries@{getBinaries}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{getBinaries}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf File} $\ast$ $>$ $\ast$ br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::getBinaries ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a4abcfcedec49098c0279db3097433f29}
+Acessa os arquivos do evento multimodal. \begin{DoxyReturn}{Retorna}
+vetor de arquivos. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a3616b43630e332773c482d6406c00a2f}.
+
+
+
+Referências binaries.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!getId@{getId}}
+\index{getId@{getId}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{getId}]{\setlength{\rightskip}{0pt plus 5cm}string br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::getId ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a1a6648f772f8ae29244dbfccd61c1e61}
+Acessa o id do evento multimodal. \begin{DoxyReturn}{Retorna}
+id do evento. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a61a42387f2e29c30639905079695d8f8}.
+
+
+
+Referências id.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!getInk@{getInk}}
+\index{getInk@{getInk}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{getInk}]{\setlength{\rightskip}{0pt plus 5cm}Ink $\ast$ br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::getInk ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_ac1dcabf82763009c60dfc3c63c43ec1a}
+Acessa o objeto ink do evento multimodal. \begin{DoxyReturn}{Retorna}
+ink objeto com os dados de tinta do evento. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a23a24cc399ceb022a43a60c46ae6a6d9}.
+
+
+
+Referências ink.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!getMultimodalValuesMap@{getMultimodalValuesMap}}
+\index{getMultimodalValuesMap@{getMultimodalValuesMap}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{getMultimodalValuesMap}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ string, void $\ast$ $>$ $\ast$ br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::getMultimodalValuesMap ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_abafe975af04a1680cc8184fcba8de6a4}
+Acessa os valores contidos no evento multimodal \begin{DoxyReturn}{Retorna}
+mapa com todos os valores contidos no evento multimodal 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a2063d0a8661ed4e178bab240c91cc014}.
+
+
+
+Referências multimodalValuesMap.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!getStrings@{getStrings}}
+\index{getStrings@{getStrings}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{getStrings}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ string $>$ $\ast$ br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::getStrings ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_ae9a66008d133d84eb977dad43b379ae5}
+Acessa as strings do evento multimodal. \begin{DoxyReturn}{Retorna}
+vetor de strings. 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a41a14202b17c64e7d0216d47bfeebfd9}.
+
+
+
+Referências strings.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!removeValue@{removeValue}}
+\index{removeValue@{removeValue}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{removeValue}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::removeValue (string {\em name})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_acb330a03e341bbf051aaf2a44c640b86}
+Remove valores do evento multimodal 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em name}]Nome do valor \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso o valor tenha sido removido 
+
+false caso o valor não tenha sido removido 
+\end{DoxyReturn}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_adfcffaf158db42a0d0fb6e522faad91f}.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!setAcceleration@{setAcceleration}}
+\index{setAcceleration@{setAcceleration}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{setAcceleration}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::setAcceleration ({\bf Acceleration} $\ast$ {\em accel})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a5f9638fa3fc331ab11e1aca30bc33035}
+Define o objeto acceleration do evento multimodal. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em accel}]objeto com os dados de aceleração do evento. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a9ba0b45f1919bbfbe08bc0267a7452eb}.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!setId@{setId}}
+\index{setId@{setId}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{setId}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::setId (string {\em id})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a5de98758c900a1523f3b52310c59b056}
+Define o id do evento multimodal. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em id}]do evento. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_aaaa1d0a0d5d196e2b3e43573404f2cca}.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!setInk@{setInk}}
+\index{setInk@{setInk}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{setInk}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::setInk (Ink $\ast$ {\em ink})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_aa5b3575f54367657785e5dbae5139646}
+Define o objeto ink do evento multimodal. 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em ink}]objeto com os dados de tinta do evento. \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_a2d7da14262a0127f188f69a72ec4a5de}.
+
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!setMultimodalValuesMap@{setMultimodalValuesMap}}
+\index{setMultimodalValuesMap@{setMultimodalValuesMap}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{setMultimodalValuesMap}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::setMultimodalValuesMap (map$<$ string, void $\ast$ $>$ $\ast$ {\em map})\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a1d8c120f0c93b3ada06e6c3c165b0aea}
+Define um mapa com valores ao evento multimodal 
+\begin{DoxyParams}{Parâmetros}
+\item[{\em map}]Mapa com todos os valores a serem inseridos no evento multimodal \end{DoxyParams}
+
+
+Implementa {\bf br::ufscar::lince::ginga::core::mmi::IMultimodalInputEvent} \doxyref{}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1IMultimodalInputEvent_ac9d69cb5bae636bf164d620dfb8c5d75}.
+
+
+
+Referências multimodalValuesMap.
+
+
+
+\subsection{Atributos}
+\index{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}!binaries@{binaries}}
+\index{binaries@{binaries}!br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent@{br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent}}
+\subsubsection[{binaries}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf File}$\ast$$>$$\ast$ {\bf br::ufscar::lince::ginga::core::mmi::MultimodalInputEvent::binaries}\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1MultimodalInputEvent_a7ebd98f88b4e48ad20d11715ebeda49a}
+
+
+Ponteiro par um objeto que guarda os dados de voz. 
+
+Vetor de arquivos 
+
+Referenciado por addFile(), getBinaries(), MultimodalInputEvent() e $\sim$MultimodalInputEvent().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/{\bf MultimodalInputEvent.h}\item 
+src/{\bf MultimodalInputEvent.cpp}\end{DoxyCompactItemize}

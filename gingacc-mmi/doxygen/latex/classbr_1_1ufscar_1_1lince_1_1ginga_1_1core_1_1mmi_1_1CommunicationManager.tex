@@ -1,0 +1,152 @@
+\section{Referência da Classe br::ufscar::lince::ginga::core::mmi::CommunicationManager}
+\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager}\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+
+
+{\ttfamily \#include $<$CommunicationManager.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf run} ()
+\item 
+int {\bf startSocket} ()
+\item 
+void {\bf createServices} (AvahiClient $\ast$c)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf CommunicationManager} $\ast$ {\bf getInstance} ()
+\item 
+static void {\bf clientCallback} (AvahiClient $\ast$c, AvahiClientState state, AVAHI\_\-GCC\_\-UNUSED void $\ast$userdata)
+\item 
+static void {\bf entryGroupCallback} (AvahiEntryGroup $\ast$g, AvahiEntryGroupState state, AVAHI\_\-GCC\_\-UNUSED void $\ast$userdata)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf CommunicationManager} ()
+\item 
+{\bf $\sim$CommunicationManager} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+HLoggerPtr {\bf logger}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_a952672bf881e13f372e41148b02b9f5f}
+
+\begin{DoxyCompactList}\small\item\em Responsável pelo controle das mensagens de log. \item\end{DoxyCompactList}\item 
+AvahiEntryGroup $\ast$ {\bf group}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_a813216a3ce2971eae7c77e8fbcd7ae02}
+
+\begin{DoxyCompactList}\small\item\em TODO Comentar. \item\end{DoxyCompactList}\item 
+AvahiSimplePoll $\ast$ {\bf simplePoll}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_ad645be9ab5ca7430507654dcbd71a42a}
+
+\begin{DoxyCompactList}\small\item\em TODO Comentar. \item\end{DoxyCompactList}\item 
+char $\ast$ {\bf name}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_abdd4ad0420a818b71c830edb5a44e414}
+
+\begin{DoxyCompactList}\small\item\em TODO Comentar. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf CommunicationManager} $\ast$ {\bf \_\-instance} = NULL\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_ade2e5aba06f7e9ff9f20a3dcbd866637}
+
+\begin{DoxyCompactList}\small\item\em Instância única. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe responsável pelo recebimento via rede, usando o protocolo ZeroConf, de mensagens XML representando eventos multimodais. 
+
+\subsection{Construtores \& Destrutores}
+\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}!CommunicationManager@{CommunicationManager}}
+\index{CommunicationManager@{CommunicationManager}!br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+\subsubsection[{CommunicationManager}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::CommunicationManager::CommunicationManager ()\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_af3ae2de8df5933c90b2364e8de223527}
+Constrói a instância única 
+
+Referências group, logger, name e simplePoll.
+
+
+
+Referenciado por getInstance().
+
+\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}!$\sim$CommunicationManager@{$\sim$CommunicationManager}}
+\index{$\sim$CommunicationManager@{$\sim$CommunicationManager}!br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+\subsubsection[{$\sim$CommunicationManager}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::ginga::core::mmi::CommunicationManager::$\sim$CommunicationManager ()\hspace{0.3cm}{\ttfamily  [protected]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_a749f9775e5163857f83051c5f56ec354}
+Destrói o \doxyref{CommunicationManager}{pag.}{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager}. 
+
+Referências \_\-instance e logger.
+
+
+
+\subsection{Métodos}
+\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}!clientCallback@{clientCallback}}
+\index{clientCallback@{clientCallback}!br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+\subsubsection[{clientCallback}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::CommunicationManager::clientCallback (AvahiClient $\ast$ {\em c}, \/  AvahiClientState {\em state}, \/  AVAHI\_\-GCC\_\-UNUSED void $\ast$ {\em userdata})\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_aea092133e1ac592ad8e8d32ccf5747c9}
+TODO Comentar 
+
+Referências createServices(), getInstance(), group e simplePoll.
+
+
+
+Referenciado por run().
+
+\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}!createServices@{createServices}}
+\index{createServices@{createServices}!br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+\subsubsection[{createServices}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::CommunicationManager::createServices (AvahiClient $\ast$ {\em c})}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_a9aad800cf83e694e92d5a1c360f17923}
+Só é chamada \char`\"{}internamente\char`\"{}, mas não pode ser protected porque é chamada pelas funções de callback, que não pertencem a classe.
+
+TODO Terminar de comentar 
+
+Referências entryGroupCallback(), group, name e simplePoll.
+
+
+
+Referenciado por clientCallback() e entryGroupCallback().
+
+\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}!entryGroupCallback@{entryGroupCallback}}
+\index{entryGroupCallback@{entryGroupCallback}!br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+\subsubsection[{entryGroupCallback}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::CommunicationManager::entryGroupCallback (AvahiEntryGroup $\ast$ {\em g}, \/  AvahiEntryGroupState {\em state}, \/  AVAHI\_\-GCC\_\-UNUSED void $\ast$ {\em userdata})\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_af065ad8bdca24f13fe958b717700eefb}
+TODO Comentar 
+
+Referências createServices(), getInstance(), group, name e simplePoll.
+
+
+
+Referenciado por createServices().
+
+\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CommunicationManager} $\ast$ br::ufscar::lince::ginga::core::mmi::CommunicationManager::getInstance ()\hspace{0.3cm}{\ttfamily  [static]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_a9a1c18a3535d26de65101a1f8fa5e9ae}
+Acessa a instância única. 
+
+Referências \_\-instance e CommunicationManager().
+
+
+
+Referenciado por clientCallback(), entryGroupCallback() e startSocket().
+
+\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}!run@{run}}
+\index{run@{run}!br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::ginga::core::mmi::CommunicationManager::run ()\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_affb75a8c8d415fb8f6617411610eb4ec}
+Laço infinito em que dados representando um evento são esperados. Sempre que um fluxo de dados com o conteúdo de um xml chega, o método postMultimodalEvent(string xml) é chamado. 
+
+Referências clientCallback(), logger, name, simplePoll e startSocket().
+
+\index{br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}!startSocket@{startSocket}}
+\index{startSocket@{startSocket}!br::ufscar::lince::ginga::core::mmi::CommunicationManager@{br::ufscar::lince::ginga::core::mmi::CommunicationManager}}
+\subsubsection[{startSocket}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::ginga::core::mmi::CommunicationManager::startSocket ()}\label{classbr_1_1ufscar_1_1lince_1_1ginga_1_1core_1_1mmi_1_1CommunicationManager_a902541dc224243b9ba7122d2713992c2}
+Inicializa um socket e espera por conexões de dispositivos externos. \begin{DoxyReturn}{Retorna}
+0 em caso de sucesso e um valor diferente em caso de erro. 
+\end{DoxyReturn}
+
+
+Referências getInstance() e logger.
+
+
+
+Referenciado por run().
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/{\bf CommunicationManager.h}\item 
+src/{\bf CommunicationManager.cpp}\end{DoxyCompactItemize}
